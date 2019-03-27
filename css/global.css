@@ -1,0 +1,49 @@
+body {
+font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+font-size: 100%;
+line-height: 1.8;
+margin: 0;
+}
+
+header {
+background-attachment: fixed;
+background-image: url("../img/background.jpg");
+padding: 4vw;
+text-align: center;
+}
+
+header a {
+display: inline-block;
+width: 30%;
+}
+
+header img {
+border-radius: 50%;
+border: 5px #fff solid;
+display: inline-block;
+max-width: 100%;
+}
+
+h1 {
+text-align: center;
+font-size: 2.4rem;
+}
+
+h1 span {
+display: block;
+font-family: inherit;
+font-size: 1.8rem;
+}
+
+h1, h2 {
+line-height: normal;
+}
+
+h2 {
+font-size: 1.5em;
+}
+
+main, footer {
+margin: 1em;
+font-size: 1.4em;
+}
