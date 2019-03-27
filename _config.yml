@@ -1,0 +1,10 @@
+destination: _httpdocs
+exclude: [
+  readme.md,
+  CNAME
+]
+layout: default
+markdown: kramdown
+name: Spellacy.net
+sass:
+    style: :compressed

@@ -43,11 +43,11 @@
 
 	// Get Navigation
 
-	var primaryNavigation = document.getElementById("primary-navigation");
+	// var primaryNavigation = document.getElementById("primary-navigation");
 
 	// Make Mobile Button
 
-	var menuButton = document.createElement("button");
+	/* var menuButton = document.createElement("button");
 
 	menuButton.setAttribute("id", "menu-button");
 	menuButton.setAttribute("aria-expanded", "false");
@@ -67,11 +67,11 @@
 
 	};
 
-	insertBefore(menuButton, primaryNavigation);
+	insertBefore(menuButton, primaryNavigation); */
 
 	// Highlight Navigation
 
-	var documentID = document.body.id;
+	/* var documentID = document.body.id;
 
 	if(document.getElementById("nav-" + documentID)) {
 
@@ -83,11 +83,11 @@
 
 		document.getElementById("nav-news-index").getElementsByTagName("a")[0].classList.add("active");
 
-	}
+	} */
 
 	// Escape Key event(s) here
 
-	document.onkeydown = function(e) {
+	/* document.onkeydown = function(e) {
 
 		if (e.which === 27) {
 
@@ -95,6 +95,6 @@
 
 		}
 
-	};
+	}; */
 
 })();
