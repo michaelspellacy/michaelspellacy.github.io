@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta name="theme-color" content="#06416D">{% if page.description %}
-	<meta name="description" content="{{ page.description }}">{% endif %}
-	<meta name="author" content="Michael Spellacy">
+	<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+	<meta content="#06416D" name="theme-color" >
+	<meta content="article" name="og:type">
+	<meta content="https://spellacy.net/img/app/ico-384-384.png" property="og:image">
+	<meta content="{{ page.title }}" property="og:title">{% if page.description %}
+	<meta content="{{ page.description }}" name="description">
+	<meta content="{{ page.description }}" property="og:description">{% endif %}
+	<meta content="Michael Spellacy" name="author">
 	<link href="/manifest.json" rel="manifest">
 	<link href="/css/global.css" rel="stylesheet">
 	<link href="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=16" rel="icon">
+	<link href="https://spellacy.net/rss/" rel="alternate" title="Michael 'Spell' Spellacy - RSS" type="application/rss+xml">
 	<title>{{ page.title }} - {{ site.name }}</title>
 </head>
 
@@ -16,7 +21,7 @@
 
 	<div id="page">
 
-		<a id="skip-nav" href="#content">Skip to main content</a>
+		<a href="#content" id="skip-nav">Skip to main content</a>
 
 		<header id="banner">
 
@@ -43,10 +48,10 @@
 			<h2>Follow Me</h2>
 
 			<ul>
-				<li><a href="https://a11y.info/@spellacy">Mastodon</a></li>
 				<li><a href="https://github.com/michaelspellacy">Github</a></li>
-				<li><a href="https://twitter.com/spellacy">Twitter</a></li>
+				<li><a href="https://a11y.info/@spellacy">Mastodon</a></li>
 				<li><a href="https://spellacy.net/rss/">RSS</a></li>
+				<li><a href="https://twitter.com/spellacy">Twitter</a></li>
 			</ul>
 
 			<button id="share-button">Share</button>
