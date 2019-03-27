@@ -33,6 +33,7 @@ h1 span {
 display: block;
 font-family: inherit;
 font-size: 1.8rem;
+font-weight: normal;
 }
 
 h1, h2 {
@@ -46,4 +47,16 @@ font-size: 1.5em;
 main, footer {
 margin: 1em;
 font-size: 1.4em;
+}
+
+#share-button {
+display: none;
+}
+
+@media(display-mode: fullscreen) {
+
+  #share-button {
+  display: block;
+  }
+
 }
