@@ -5,19 +5,19 @@ line-height: 1.8;
 margin: 0;
 }
 
-header {
+#banner {
 background-attachment: fixed;
 background-image: url("../img/background.jpg");
 padding: 4vw;
 text-align: center;
 }
 
-header a {
+#banner a {
 display: inline-block;
 width: 30%;
 }
 
-header img {
+#banner img {
 border-radius: 50%;
 border: 5px #fff solid;
 display: inline-block;
