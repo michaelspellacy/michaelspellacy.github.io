@@ -105,8 +105,9 @@
 
 		try {
 
-			await navigator.share({ title: "Example Page", url: "" });
-    	console.log("Data was shared successfully");
+			await navigator.share({ title: document.title.replace(" - Spellacy.net", ""), url: document.URL });
+
+			console.log("Data was shared successfully");
 
 		} catch (err) {
 

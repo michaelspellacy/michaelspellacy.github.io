@@ -1,8 +1,27 @@
+html {
+box-sizing: border-box;
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+img {
+display: block;
+max-width: 100%;
+}
+
 body {
 font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+font-smooth: auto;
+font-style: normal;
+font-variant: normal;
 font-size: 100%;
 line-height: 1.8;
 margin: 0;
+text-rendering: auto;
+-moz-osx-font-smoothing: auto;
+-webkit-font-smoothing: antialiased;
 }
 
 #banner {
@@ -50,7 +69,13 @@ font-size: 1.4em;
 }
 
 #share-button {
+border-radius: 5px;
 display: none;
+border: 0;
+padding: 1em;
+color: #fff;
+background-color: #06416D;
+font-size: 1em;
 }
 
 @media(display-mode: fullscreen) {
