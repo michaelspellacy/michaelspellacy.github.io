@@ -12,6 +12,7 @@ exclude: [
 highlighter: rouge
 lang: en-US
 markdown: kramdown
+permalink: /:title/
 sass:
   style: :compressed
 social-github: https://github.com/michaelspellacy/
