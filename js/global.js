@@ -1,4 +1,4 @@
-// Michael Spellacy - Global Functions
+// Spellacy.net - Global Functions
 // Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy
 
 (function(){
