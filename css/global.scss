@@ -97,6 +97,26 @@ margin: 1em;
 font-size: 1.4em;
 }
 
+#social {
+margin: 0;
+padding: 0;
+list-style: none;
+
+  li {
+  display: inline-block;
+
+    &:not(:last-child) {
+    margin-right: 1em;
+    }
+
+  }
+
+  a {
+  text-decoration: none;
+  }
+
+}
+
 #share-button {
 border-radius: 5px;
 display: none;

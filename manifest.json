@@ -1,13 +1,15 @@
+---
+---
 {
     "dir": "ltr",
-    "lang": "en-US",
+    "lang": "{{site.lang}}",
     "name": "Michael Spellacy - The Blog",
     "scope": "/",
     "display": "fullscreen",
     "start_url": "/",
     "short_name": "Spell",
     "theme_color": "#06416D",
-    "description": "Spell is a web developer, designer and accessibility specialist living in beautiful Allentown, PA. In his spare time, he can be found restoring retro arcade machines.",
+    "description": "{{site.description}}",
     "categories": ["web", "accessibility", "blog"],
     "orientation": "natural",
     "background_color": "#06416D",
@@ -15,54 +17,54 @@
     "prefer_related_applications": false,
     "icons": [{
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=72",
+     "src": "{{site.author-image}}?s=72",
      "sizes": "72x72",
      "type": "image/png"
 
    },
    {
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=96",
+     "src": "{{site.author-image}}?s=96",
      "sizes": "96x96",
      "type": "image/png"
 
    },
    {
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=128",
+     "src": "{{site.author-image}}?s=128",
      "sizes": "128x128",
      "type": "image/png"
 
    },
    {
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=144",
+     "src": "{{site.author-image}}?s=144",
      "sizes": "144x144",
      "type": "image/png"
 
    },
    {
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=152",
+     "src": "{{site.author-image}}g?s=152",
      "sizes": "152x152",
      "type": "image/png"
 
    },
    {
 
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=192",
+     "src": "{{site.author-image}}?s=192",
      "sizes": "192x192",
      "type": "image/png"
 
    },
    {
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=384",
+     "src": "{{site.author-image}}?s=384",
      "sizes": "384x384",
      "type": "image/png"
 
    },
    {
-     "src": "https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=512",
+     "src": "{{site.author-image}}?s=512",
      "sizes": "512x512",
      "type": "image/png"
    }
