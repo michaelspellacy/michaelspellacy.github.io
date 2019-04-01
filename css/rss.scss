@@ -1,0 +1,57 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+/*!
+
+  Spellacy.net - RSS Feed
+  Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy
+
+*/
+
+rss {
+box-sizing: border-box;
+display: block;
+font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+font-smooth: auto;
+font-style: normal;
+font-variant: normal;
+font-size: 100%;
+line-height: 1.8;
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+title {
+border-bottom: 1px solid #666;
+color: #000F46;
+display: block;
+font-weight: bold;
+margin: 5px;
+padding: 2px;
+}
+
+link {
+color: blue;
+display: block;
+padding-left: 10px;
+}
+
+item {
+display: block;
+padding: 2px 30px 2px 30px;
+}
+
+docs {
+border: 1px solid #666;
+display: block;
+margin: 20px;
+padding: 5px;
+text-align: center;
+}
+
+/* all hidden elements */
+language, lastBuildDate, ttl, guid, category, description, pubDate, sy {
+display: none;
+}
