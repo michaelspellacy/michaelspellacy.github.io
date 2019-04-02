@@ -60,8 +60,15 @@ z-index: 2;
 background-attachment: fixed;
 background-color: #000F46;
 background-image: url("../img/background-2.jpg");
+background-size: contain;
 padding: 4vw;
 text-align: center;
+
+  @media(min-width: 778px) {
+
+    background-size: auto;
+
+  }
 
   a {
   display: inline-block;
