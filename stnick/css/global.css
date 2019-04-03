@@ -1,7 +1,3 @@
-/*
-	A Visit from Saint Nicolas
-	Developer: Michael "Spell" Spellacy, User Interface Developer, @spellacy
-*/
 
 @font-face {
 font-family: 'StNicholasRegular';
@@ -12,85 +8,85 @@ font-style: normal;
 }
 
 body {
-margin: 0;
-padding: 0;
-font: 100%/1.6 'StNicholasRegular';
 background-color: #fce2c1;
 background-image: url(../img/holly-border-sml-lft.png), url(../img/holly-border-sml-rht.png);
 background-position: left top ,  right top;
 background-repeat: repeat-y;
+font: 100%/1.6 'StNicholasRegular';
+margin: 0;
+padding: 0;
 text-align: center;
 }
-	
+
 a {
 color: #000;
 }
-	
+
 a:hover {
 text-decoration: none;
 }
 
 article {
-display: block;
-padding: 4em;
 background-image: url(../img/holly-border-sml-top.png), url(../img/holly-border-sml-bot.png);
 background-position: top left ,  bottom left;
 background-repeat: repeat-x;
+display: block;
+padding: 4em;
 }
-	
+
 h1 {
-margin: 0;
-padding-bottom: 0;
 color: #085F00;
-text-shadow: 1px 1px 0 #ccc;
 font-size: 8vw;
 line-height: 1.3;
+margin: 0;
+padding-bottom: 0;
+text-shadow: 1px 1px 0 #ccc;
 }
-	
+
 p {
-margin: 1em 0;
-padding: 0;
 font-size: 5vw;
 letter-spacing: 0.1;
+margin: 1em 0;
+padding: 0;
 }
-	
+
 h1 + p {
+color: #EB3216;
 margin-top: 0.5em;
 padding-top: 0;
 text-shadow: 1px 1px 0 #ccc;
-color: #EB3216;
 }
 
 hr {
+background: url(../img/hr.png) bottom center no-repeat;
 border: 0;
-margin: 1em 0;
 height: 42px;
-background: url(../img/hr.png) bottom center no-repeat; 
+margin: 1em 0;
 }
-	
+
 img {
+border: 1px #000 solid;
+box-shadow: 0 0 5px 1px #888;
 display: block;
 margin: 2em auto 2em;
 max-width: 100%;
-border: 1px #000 solid;
-box-shadow: 0 0 5px 1px #888;
 }
 
 img[src*="img/intro.png"] {
 border-radius: 50%;
 }
-	
+
 img[src*="img/close.png"], div img {
 border: medium none;
 box-shadow: none;
 }
 
 @media (min-width: 480px) {
-	
+
 	body {
 	background-image: url(../img/holly-border-lrg-lft.png), url(../img/holly-border-lrg-rht.png);
 	}
-		
+
 	article {
 	background-image: url(../img/holly-border-lrg-top.png), url(../img/holly-border-lrg-bot.png);
 	padding: 8em;
@@ -99,5 +95,5 @@ box-shadow: none;
 	img {
 	width: 50%;
 	}
-	
+
 }
