@@ -61,7 +61,8 @@ background-attachment: fixed;
 background-color: #000F46;
 background-image: url("../img/background-2.jpg");
 background-size: contain;
-padding: 4vw;
+padding: 2vw;
+position: relative;
 text-align: center;
 
   @media(min-width: 778px) {
@@ -80,6 +81,29 @@ text-align: center;
   border: 5px #fff solid;
   display: inline-block;
   max-width: 100%;
+  }
+
+}
+
+#primary-navigation {
+
+  ul {
+  margin: 1vw 0 0;
+  padding: 0;
+  list-style: none;
+  }
+
+  li {
+  display: inline-block;
+  }
+
+  a {
+  padding: 0.6em;
+  color: #fff;
+  text-align: center;
+  min-width: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
   }
 
 }
