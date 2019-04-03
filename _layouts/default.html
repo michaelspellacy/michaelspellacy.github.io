@@ -16,7 +16,6 @@
 	<link href="{{ page.url | replace:'index.html','' | prepend: site.url}}" rel="canonical">
 	<link href="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.png?s=16" rel="icon">
 	<link href="/rss.xml" rel="alternate" title="Michael Spellacy - RSS Feed" type="application/rss+xml">
-	<link href="https://webmention.herokuapp.com/api/webmention" rel="webmention">
 	<title>{{ page.title }} - {{ site.name }}</title>
 
 	<!--
@@ -63,17 +62,6 @@
 			<article>
 
 				{{ content }}
-
-				<script id="webmention-hosted">
-  (function () {
-    var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
-    url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
-    url = url && url[0] ? url[0].href : false;
-    sn.type = "text/javascript"; sn.async = true;
-    sn.src = "//webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
-    s.parentNode.insertBefore(sn, s);
-  }());
-</script>
 
 				<button id="share-button"><i class="fas fa-share"></i> Share this content</button> <!-- TODO: Script this in -->
 
