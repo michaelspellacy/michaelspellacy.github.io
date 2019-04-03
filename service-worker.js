@@ -1,3 +1,6 @@
+---
+---
+
 // This is the "Offline copy of pages" service worker
 
 // Install stage sets up the index page (home page) in the cache and opens a new cache
@@ -12,7 +15,7 @@ self.addEventListener("install", function(event) {
 
       return caches.open("spellacy-offline").then(function(cache) {
 
-        console.log("Michael Spellacy cached index page during install" + response.url);
+        console.log("{{site.name}} cached index page during install" + response.url);
         return cache.put(indexPage, response);
 
       });
@@ -31,7 +34,7 @@ self.addEventListener("fetch", function(event) {
 
       return fetch(request).then(function (response) {
 
-        console.log("Michael Spellacy added page to offline" + response.url)
+        console.log("{{site.name}} added page to offline" + response.url)
 
         return cache.put(request, response);
 
@@ -47,7 +50,7 @@ self.addEventListener("fetch", function(event) {
 
     fetch(event.request).catch(function(error) {
 
-      console.log("Michael Spellacy network request failed. Serving content from cache: " + error );
+      console.log("{{site.name}} network request failed. Serving content from cache: " + error );
 
       // Check to see if you have it in the cache
 
