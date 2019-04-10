@@ -68,9 +68,15 @@ text-rendering: auto;
 
 .alert {
 background-color: tomato;
-padding: 1em;
 color: white;
+font-size: 1em;
+padding: 1em;
 text-align: center;
+
+	strong {
+	font-weight: normal;
+	}
+
 }
 
 
