@@ -69,9 +69,15 @@ text-rendering: auto;
 .alert {
 background-color: #a90329;
 color: white;
-font-size: 1em;
-padding: 1em;
+font-size: 0.9em;
+padding: 0.9em;
 text-align: center;
+
+	@media(min-width: 778px) {
+
+		font-size: 1em;
+
+	}
 
 	strong {
 	font-weight: normal;
