@@ -11,6 +11,41 @@ box-sizing: border-box;
 box-sizing: inherit;
 }
 
+// Code Blocks
+
+code {
+background-color: #151d27;
+background-image: linear-gradient(130deg, #263343 0%, #263343 21%, #151d27 68%, #151d27 100%);
+border-radius: 5px;
+color: #fff;
+display: inline-block;
+padding: .2em 1em;
+margin: 1px;
+word-wrap: break-word;
+}
+
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+
+	code {
+	display: block;
+  margin: 0;
+  padding: 1em;
+
+		strong {
+		color: rgb(180, 220, 246);
+		}
+
+    b {
+    color: tomato;
+    }
+
+	}
+
+}
+
 img {
 display: block;
 max-width: 100%;
