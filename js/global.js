@@ -7,21 +7,17 @@
 
 	// PWA Register
 
-	if (navigator.serviceWorker.controller) {
+	if ("serviceWorker" in navigator) {
 
-	  console.log("Active service worker found, no need to register");
+		window.addEventListener('load', function() {
 
-	} else {
+			//Register the ServiceWorker
 
-		//Register the ServiceWorker
+			navigator.serviceWorker.register("/service-worker.js", {
 
-		navigator.serviceWorker.register("/service-worker.js", {
+				scope: "./"
 
-	    	scope: "./"
-
-		}).then(function(reg) {
-
-	    	console.log("Service worker has been registered for scope:" + reg.scope);
+			});
 
 		});
 
