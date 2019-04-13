@@ -2,20 +2,20 @@
 ---
 
 {
+    "background_color": "#06416D",
+    "categories": ["web", "accessibility", "blog"],
+    "description": "{{site.description}}",
     "dir": "ltr",
+    "display": "minimal-ui",
     "lang": "{{site.lang}}",
     "name": "Michael Spellacy - The Blog",
-    "scope": "/",
-    "display": "fullscreen",
-    "start_url": "/",
-    "short_name": "Spell",
-    "theme_color": "#06416D",
-    "description": "{{site.description}}",
-    "categories": ["web", "accessibility", "blog"],
-    "orientation": "natural",
-    "background_color": "#06416D",
-    "related_applications": [],
+    "orientation": "any",
     "prefer_related_applications": false,
+    "related_applications": [],
+    "scope": "/",
+    "short_name": "Spell",
+    "start_url": "/",
+    "theme_color": "#06416D",
     "icons": [{
 
      "src": "{{site.author-image}}?s=72",
