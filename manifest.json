@@ -2,21 +2,21 @@
 ---
 
 {
-    "dir": "ltr",
-    "lang": "{{site.lang}}",
-    "name": "Michael Spellacy - The Blog",
-    "scope": "/",
-    "display": "minimal-ui",
-    "start_url": "/",
-    "short_name": "Spell",
-    "theme_color": "#06416D",
-    "description": "{{site.description}}",
-    "categories": ["web", "accessibility", "blog"],
-    "orientation": "any",
-    "background_color": "#06416D",
-    "related_applications": [],
-    "prefer_related_applications": false,
-    "icons": [{
+  "background_color": "{{site.theme-color}}",
+  "categories": ["web", "accessibility", "blog", "video games", "retro arcade"],
+  "description": "{{site.description}}",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "lang": "{{site.lang}}",
+  "name": "{{site.app}}",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "short_name": "{{site.nickname}}",
+  "start_url": "/",
+  "theme_color": "{{site.theme-color}}",
+  "icons": [{
 
      "src": "{{site.author-image}}?s=72",
      "sizes": "72x72",
