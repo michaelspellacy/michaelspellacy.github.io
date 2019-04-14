@@ -109,7 +109,7 @@ z-index: 2;
 }
 
 #banner {
-background-color: #000F46;
+background-color: {{site.theme-color}};
 background-image: url("../img/background-2.jpg");
 background-size: contain;
 padding: 2vw;
