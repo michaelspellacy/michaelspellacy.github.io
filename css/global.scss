@@ -173,9 +173,9 @@ text-align: center;
 #primary-navigation {
 
   ul {
+  list-style: none;
   margin: 1vw 0 0;
   padding: 0;
-  list-style: none;
   }
 
   li {
@@ -183,19 +183,19 @@ text-align: center;
   }
 
   a {
-  padding: 0.6em;
-  color: #fff;
-  text-align: center;
-  min-width: 100px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 6px;
+  color: #fff;
+  min-width: 100px;
+  padding: 0.6em;
+  text-align: center;
   }
 
 }
 
 h1 {
-text-align: center;
 font-size: 2.4rem;
+text-align: center;
 
   span {
   display: block;
@@ -215,14 +215,14 @@ font-size: 1.5em;
 }
 
 main, footer {
-margin: 1em;
 font-size: 1.4em;
+margin: 1em;
 }
 
 #social {
+list-style: none;
 margin: 0;
 padding: 0;
-list-style: none;
 
   li {
   display: inline-block;
@@ -240,18 +240,29 @@ list-style: none;
 }
 
 #share-button {
-border-radius: 5px;
-display: none;
-border: 0;
-padding: 1em;
-color: #fff;
 background-color: #06416D;
+border-radius: 5px;
+border: 0;
+color: #fff;
+display: none;
 font-size: 1em;
+padding: 1em;
 
-  @media(display-mode: minimal-ui) {
+	@media(display-mode: minimal-ui) {
 
-    display: block;
+		display: block;
 
-  }
+	}
+
+	&::before {
+	content: "\f064";
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+	margin-right: 5px;
+	}
 
 }
