@@ -5,6 +5,8 @@
 
 	document.getElementsByTagName("html")[0].className = "js";
 
+	var mainContent = document.getElementById("content");
+
 	// PWA Register
 
 	if ("serviceWorker" in navigator) {
@@ -108,6 +110,14 @@
 	}; */
 
 	// Add share button
+
+	// <button id="share-button"><i class="fas fa-share"></i> Share this content</button> <!-- TODO: Script this in -->
+
+	var shareButtonElm = document.createElement("button");
+	shareButtonElm.id = "share-button";
+	shareButtonElm.textContent = "Share";
+
+	mainContent.appendChild(shareButtonElm);
 
 	var shareButton = document.getElementById("share-button");
 
