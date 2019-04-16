@@ -5,7 +5,7 @@
 <?xml-stylesheet type="text/css" href="css/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-	<title>{{ site.author (site.nickname) - site.role | xml_escape }}</title>
+	<title>{{ site.author | xml_escape }}</title>
 	<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
 	<link>{{ site.url }}</link>
 	<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml"/>

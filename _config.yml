@@ -12,6 +12,7 @@ exclude: [
 ]
 highlighter: rouge
 lang: en-US
+license: https://creativecommons.org/licenses/by/4.0/
 markdown: kramdown
 name: Spellacy.net
 nickname: Spell

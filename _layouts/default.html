@@ -14,7 +14,7 @@
 	<link href="/manifest.json" rel="manifest">
 	<link href="{{ page.url | replace:'index.html','' | prepend: site.url}}" rel="canonical">
 	<link href="{{site.author-image}}?s=16" rel="icon">
-	<link href="/rss.xml" rel="alternate" title="Michael Spellacy - RSS Feed" type="application/rss+xml">
+	<link href="/rss.xml" rel="alternate" title="{{site.author}} - RSS Feed" type="application/rss+xml">
 	<link href="mailto:{{site.email}}" rel="me">
 	<title>{{ page.title }} - {{ site.name }}</title>
 
@@ -78,7 +78,9 @@
 				<li><a href="{{site.social-twitter}}" rel="me"><i class="fab fa-twitter"></i> Twitter</a></li>
 			</ul>
 
-			<p><small>&copy; 1973-{{ "now" | date: "%Y" }} Copyright Michael Spellacy. All rights reserved. All content and features of this site are licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons</a>. Source code and site hosted on <a href="{{site.sorce-code}}">Github</a>.</small></p>
+			<p class="license"><small>Except where otherwise noted, content on this site is licensed under <a href="{{site.license}}" rel="license">Creative Commons Attribution 4.0 International</a>. The source code for this site may be found on <a href="{{site.sorce-code}}">Github</a>.</small></p>
+
+			<p><small>How's my coding? Feel free to <a href="mailto:{{site.email}}">drop me a line</a> if you spot any issues with my site.</small></p>
 
 		</footer>
 
