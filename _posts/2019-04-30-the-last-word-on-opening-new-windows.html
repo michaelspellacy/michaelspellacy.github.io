@@ -8,11 +8,11 @@ published: "2019-05-01 00:01:01"
 
 <time datetime="{{ page.published }}">{{ page.published | date: "%B %d, %Y" }}</time>
 
-<p>From time to time, the question surrounding the opening of new windows (tabs) to external sites...pops up. (Sorry.) I thought I would share a few thoughts as to why we may want to think real hard before implementing this functionality. It is a touchy matter for some and has been discussed, <em>ad nauseam</em>, for years, so I might be beating a dead horse here, but this is certainly how I have come to see and respond to the request over the last decade. Also, why repeat myself to friends and colleagues when I can just share this article when fresh controversy over this subject erupts again? I think it is a smart idea to be efficient with our time, since we have so little of it.</p>
+<p>From time to time, the question surrounding the opening of new windows (tabs) to external sites...pops up. (Sorry.) I thought I would share a few thoughts as to why we may want to think real hard before implementing this functionality. It is a touchy matter for some and has been discussed, <em>ad nauseam</em>, for years, so I might be beating a dead horse, but this is certainly how I have come to see and respond to the request over the last decade. Also, why repeat myself to friends and colleagues when I can just share this article when fresh controversy over this subject erupts again? I think it is a smart idea to be efficient with our time, since we have so little of it.</p>
 
 <h2>History Lesson</h2>
 
-<p>Let me tell you a little story. Back in the early days of the web, around the mid to late 90’s, we did a lot of <em>unusual</em> things in an effort to keep users on our sites. If websites where ever narcissistic and creepy, this was their heyday. <em>Hi, where ya going? Stick around and we’ll have some fun. Check out my Flash! Click on me. Don’t leave...please.</em> I think this sums up the experience back then pretty well, don't you? Overall, there was this rampant and irrational fear that if a user left your site, that they would never return. Let's be honest here. With a website going to such great lengths to keep you from leaving<em>&mdash;who'd want to stay?</em></p>
+<p>Let me tell you a little story. Back in the early days of the web, around the mid to late 90’s, we did a lot of <em>unusual</em> things in an effort to keep users on our sites. If websites were ever narcissistic and creepy, this was their heyday. <em>Hi, where ya going? Stick around and we’ll have some fun. Check out my Flash! Click on me. Don’t leave...please.</em> I think this sums up the experience back then pretty well, don't you? Overall, there was this rampant and irrational fear that if a user left your site, that they would never return. Let's be honest here. With a website going to such great lengths to keep us from leaving<em>&mdash;who'd want to stay?</em></p>
 
 <figure>
 
@@ -22,9 +22,9 @@ published: "2019-05-01 00:01:01"
 
 </figure>
 
-<p>In later years, this effort was also mixed in with a misguided attempt to improve one’s SEO (Search Engine Optimization) ranking, so it was very commonplace to have every link that left your site, open in a new window. SEO specialists didn't like the idea of a user leaving a site because it supposedly hurt the "time on page" and bounce rate statistics. However, if a user is not on your site, then they are not on your site. Keeping the window open in the background is not an accurate (or honest) portrayal of usage. Now, combine all of this with hostile attempts to push ads into our faces by hijacking the user experience with popup windows and you have a recipe for a UX disaster, which it was. Suffice to say, this incident has left a long standing bad taste in our collective mouths.</p>
+<p>In later years, this effort was also combined with a misguided attempt to improve one’s SEO (Search Engine Optimization) ranking, so it was very commonplace to have every link that left your site, open in a new window. SEO specialists didn't like the idea of a user leaving a site because it supposedly hurt the "time on page" and bounce rate statistics. However, if a user is not on your site, then they are not on your site. Keeping the window open in the background is not an accurate (or honest) portrayal of usage. Now, combine all of this with hostile attempts to push ads into our faces by hijacking the user experience with popup windows and you have a recipe for a UX disaster, which it was. Suffice to say, this incident has left a long standing bad taste in our collective mouths.</p>
 
-<p>Unfortunately, many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to keep them there. <em>Say what?</em> Yes! Because we trust our users and have done our jobs in crafting an experience they will want or need to return to, no hacks or anti-patterns are required! It is often best to make no assumptions here and <em>let the user decide</em> if opening a new window is the best course of action. 'Nuff said.</p>
+<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to keep them there. <em>Say what?</em> Yes! Because we trust our users and have done our jobs to craft an experience they will want or need to return to, no hacks or anti-patterns are required! It is often best to make no assumptions here about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action. 'Nuff said.</p>
 
 <p>If you would like to read another opinion on the subject, by a more reputable and well-known web design heavy-weight, then please check out <a href="https://css-tricks.com/use-target_blank/">When to use target="_blank"</a> by Chris Coyier. I am even linking to this article without opening it in a new window. <em>Meta!</em></p>
 
@@ -34,7 +34,7 @@ published: "2019-05-01 00:01:01"
 
 <pre><code>... &lt;a href="..." target="_blank" <strong>aria-label="my link text (opens in new window)"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
 
-<p>Here I am using <code>aria-label</code> to repeat the link text and add an additional message that indicates that the link will open in a new window. We are not done yet, though. ARIA (Accessible Rich Internet Applications) will benefit some assistive technology users, but it won't cover <strong>all</strong> use cases, so we need to improve upon this a little more by adding a visual indicator, which often looks something like this:</p>
+<p>Here, I am using <code>aria-label</code> to repeat the link text and add an additional message that indicates that the link will open in a new window. We are not done yet, though. ARIA (Accessible Rich Internet Applications) will benefit some assistive technology users, but it won't cover <strong>all</strong> use cases, so we need to improve upon this a little more by adding a visual indicator, which often looks something like this:</p>
 
 <blockquote>
 
@@ -42,7 +42,7 @@ published: "2019-05-01 00:01:01"
 
 </blockquote>
 
-<p>Here is the CSS I use for it. Feel free to steal it!</p>
+<p>Here is the CSS that I use for this visual cue. Feel free to steal it!</p>
 
 <pre><code>a[target="_blank"]::after {
 background-color: transparent;
@@ -70,13 +70,13 @@ width: 14px;
 
 </blockquote>
 
-<p>I think I like this most of all! Simple and direct. Yes, it is a bit of a poor man's solution, but it'll work in a pinch. There is no shame in it.</p>
+<p>I think I like this most of all! Simple and direct. Yes, it is a bit of a poor man's method, but it'll work in a pinch. There is no shame in it.</p>
 
 <h2>Security</h2>
 
-<p>Let's talk about security briefly. Full disclosure: I am no security expert, but I know enough to be dangerous. (In a good way&mdash;I swear!)</p>
+<p>Let's briefly talk about security. Full disclosure: I am no security expert, but I know enough to be dangerous. (In a good way&mdash;I swear!)</p>
 
-<p>It has <a href="https://mathiasbynens.github.io/rel-noopener/">been discovered</a> that linking to pages with just <code>target="_blank"</code>, could be leaving your visitors exposed to <a href="https://www.owasp.org/index.php/Reverse_Tabnabbing">Reverse Tabnabbing</a>. The page you are <em>linking to</em>, if compromised, can gain full access to the <code>window.opener.location</code> object of the parent page. (Read: Your website.) The parent page can then be redirected to a phishing page or do other harmful things. Since the user trusts the parent page they left, they would have little reason to suspect that it has been hacked, which is pretty terrifying!</p>
+<p>It has <a href="https://mathiasbynens.github.io/rel-noopener/">been discovered</a> that linking to pages with just <code>target="_blank"</code>, could be leaving your visitors exposed to <a href="https://www.owasp.org/index.php/Reverse_Tabnabbing">Reverse Tabnabbing</a>. The page you are <em>linking to</em>, if compromised, can gain full access to the <code>window.opener.location</code> object of the parent page. (Your website.) The parent page can then be redirected to a phishing page or do other harmful things. Since the user trusts the parent page they left, they would have little reason to suspect that it has been hacked, which is pretty terrifying!</p>
 
 <p>To prevent this, it has been recommended that we should be including, in addition to our accessibility improvements, the following attribute:</p>
 
@@ -88,22 +88,24 @@ width: 14px;
 
 <p>Browsers that support <code>rel="noopener"</code> can be found on <a href="https://caniuse.com/#feat=rel-noopener">Can I Use</a>.</p>
 
-<a href="https://developers.google.com/web/tools/lighthouse/audits/noopener">Google Lighthouse</a> even recommends . for security reasons, that <code>rel="noopener"</code> be used on links that use <code>target="_blank"</code>.</p>
+<a href="https://developers.google.com/web/tools/lighthouse/audits/noopener">Google Lighthouse</a> even recommends that <code>rel="noopener"</code> be used on links that use <code>target="_blank"</code>.</p>
 
 <p><strong>Note:</strong> At the time of this article's publishing, I am still not sure if this is the permanent solution to this problem or if browser vendors have addressed it, but I will post an update when I have more information about it.</p>
 
 <h2>Performance</h2>
 
-<p>Finally, it is has also been revealed that <code>target="_blank"</code>, when used alone, can cause a slight performance hit when a user is going from one page to another in a new window. Read <a href="https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/">The Performance Benefits of rel=noopener</a> by Jake Archibald. Turns out that <code>rel="noopener"</code> can be helpful here, too! Users like zippy experiences, so why not oblige them whenever you can?</p>
+<p>Finally, it is has also been revealed that <code>target="_blank"</code>, when used alone, can cause a slight performance hit when a user is going from one page to another in a new window. Read <a href="https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/">The Performance Benefits of rel=noopener</a> by Jake Archibald. Once again, <code>rel="noopener"</code> can be helpful here, too! Users like zippy experiences, so why not oblige them whenever you can?</p>
 
 <h2>Conclusion</h2>
 
-<p>As it turns out, there is a lot to consider before deciding to open new windows with good ol' <code>target="_blank"</code>. Throughout this article, I have been very careful to not deter use of <code>target="_blank"</code>, because there are times where you may need it. However, if you do choose to use it, one must strongly consider all of the above. (And test against it&mdash;I'm looking at you QA.) This is information that should be shared with fellow colleagues and clients, who often make this request without understanding many of the complexities that may arise due to improper implementation of this attribute.</p>
+<p>As you can see, there is much to consider before nonchalantly deciding to open new windows with good ol' <code>target="_blank"</code>. Throughout this article, I have been very careful to not deter use of <code>target="_blank"</code>, because there are times where you may need it. However, if you do choose to use it, you should strongly consider all I have mentioned above. This is information that should be shared with fellow colleagues and clients, who often make this request without understanding many of the complexities that may arise due to improper implementation of this functionality.</p>
 
-<p>Given all that could go wrong, whether it be by the hand of a front-end developer or content editor, sometimes the best decision may be not to launch new windows at all. This is a rule I often abide by personally. For clients, I would absolutely approach the launching of new windows with a healthy amount of caution. As we have learned, a poor implementation can have a negative impact on users, and through that, a negative impact on your client's brand. So, the above recommendations, in a more digestible chunk:</p>
+<p>Given all that could go wrong, whether it be by the hand of a front-end developer or content editor, sometimes the best decision may be not to launch new windows at all. This is a rule I often abide by personally. For clients, I would absolutely approach the launching of new windows with a healthy amount of caution, as a poor implementation can have a negative impact on users, and through that, a negative impact on your client's brand.</p>
+
+<p>Before signing off, let's recap what we should be doing:</p>
 
 <ul>
-  <li>Trust Users -  Let your user decide if opening a new window is the best course of action.</li>
+  <li>Trust Users -  The old ways are dead. Let your users decide if opening a new window is the best course of action.</li>
   <li>Accessibility - If a new window is needed, use <code>aria-label</code> for assistive technology and include visual indicators.</li>
   <li>Security & Performance - If a new window is needed, make use of <code>rel="noopener"</code>. This will prevent tabnabbing and improve page load between parent and child windows.</li>
 </ul>
