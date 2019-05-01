@@ -11,6 +11,45 @@ box-sizing: border-box;
 box-sizing: inherit;
 }
 
+a {
+
+	&[target="_blank"] {
+
+		&:after {
+		background-color: transparent;
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAclBMVEUAAAAWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmGEDiaiAAAAJXRSTlMAgMjOaRL0vvZfDrOkt26hhvrCjHXb2NKrmXlkW0QzJQhMLCQc4w6HOwAAAONJREFUOMvNkFkWgyAMRR9VpNXiVDvP0/63WGpEOETtb+8HJ/AuRgJOuoxUR12fwYnfHmtwhC9EAJ7H46LnlJ/vvjADVlR5R00pDnlid4t3gMKXvLKCCoUahqX73tasVeKY6z5PWmFm1jKVqUVKoGhzEfdCAw+bazhBwOL6Z0A5LBRdTgNYk8Dv25nvSAhzTZuTaG4k8PtS60xdAJDAcshvcQiFvesv56aKA+Fl+48Jt4zuDwqENs+aFHDFDwH/K8TgJPY8MoUSjLIy5zkJo5BQTAjt2B7j+Qotl/1mG3E2in79A5rTPUZPwwJQAAAAAElFTkSuQmCC);
+		background-position: center right;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: "";
+		display: inline-block;
+		height: 14px;
+		margin-left: 10px;
+		vertical-align: middle;
+		width: 14px;
+		}
+
+		&:focus, &:hover {
+
+			&:after {
+			opacity: .8;
+			}
+
+		}
+
+  }
+
+}
+
+figcaption {
+color: #333;
+font-style: italic;
+}
+
+blockquote {
+color: #666;
+}
+
 // Code Blocks
 
 code {
@@ -19,8 +58,8 @@ background-image: linear-gradient(130deg, #263343 0%, #263343 21%, #151d27 68%, 
 border-radius: 5px;
 color: #fff;
 display: inline-block;
-padding: .2em 1em;
 margin: 1px;
+padding: .2em 1em;
 word-wrap: break-word;
 }
 
@@ -53,10 +92,10 @@ max-width: 100%;
 
 body {
 font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+font-size: 100%;
 font-smooth: auto;
 font-style: normal;
 font-variant: normal;
-font-size: 100%;
 line-height: 1.8;
 margin: 0;
 text-rendering: auto;
