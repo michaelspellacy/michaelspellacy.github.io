@@ -24,7 +24,7 @@ published: "2019-05-01 00:01:01"
 
 <p>In later years, this effort was also combined with a misguided attempt to improve one’s SEO (Search Engine Optimization) ranking, so it was very commonplace to have every link that left your site, open in a new window. SEO specialists didn't like the idea of a user leaving a site because it supposedly hurt the "time on page" and bounce rate statistics. However, if a user is not on your site, then they are not on your site. Keeping the window open in the background is not an accurate (or honest) portrayal of usage. Now, combine all of this with hostile attempts to push ads into our faces by hijacking the user experience with popup windows and you have a recipe for a UX disaster, which it was. Suffice to say, this incident has left a long standing bad taste in our collective mouths.</p>
 
-<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to keep them there. <em>Say what?</em> Yes! Because we trust our users and have done our jobs to craft an experience they will want or need to return to, no hacks or anti-patterns are required! It is often best to make no assumptions here about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action. 'Nuff said.</p>
+<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to keep them there. <em>Say what?</em> Yes! Because we trust our users and have done our jobs to craft an experience they will want or need to return to, no hacks or anti-patterns are required! It is often a smart idea to make no assumptions here about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action. Your users are intelligent. Treat them as such. 'Nuff said.</p>
 
 <p>If you would like to read another opinion on the subject, by a more reputable and well-known web design heavy-weight, then please check out <a href="https://css-tricks.com/use-target_blank/">When to use target="_blank"</a> by Chris Coyier. I am even linking to this article without opening it in a new window. <em>Meta!</em></p>
 
@@ -34,7 +34,7 @@ published: "2019-05-01 00:01:01"
 
 <pre><code>... &lt;a href="..." target="_blank" <strong>aria-label="my link text (opens in new window)"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
 
-<p>Here, I am using <code>aria-label</code> to repeat the link text and add an additional message that indicates that the link will open in a new window. We are not done yet, though. ARIA (Accessible Rich Internet Applications) will benefit some assistive technology users, but it won't cover <strong>all</strong> use cases, so we need to improve upon this a little more by adding a visual indicator, which often looks something like this:</p>
+<p>In this technique, I am using <code>aria-label</code> to repeat the link text and add an additional message that indicates that the link will open in a new window. The <code>aria-label</code> attribute will override the text within. We are not done yet, though. ARIA (Accessible Rich Internet Applications) will benefit some assistive technology users, but it won't cover <strong>all</strong> use cases, so we need to improve upon this a little more by adding a visual indicator, which often looks something like this:</p>
 
 <blockquote>
 
@@ -58,9 +58,13 @@ vertical-align: middle;
 width: 14px;
 }</code></pre>
 
-<p>In some cases, not setting up your links to work for all people will be flagged as a WCAG 2.1 guideline violation. Often cited in various success criterion under <a href="https://www.w3.org/TR/WCAG21/#predictable">Guideline 3.2 Predictable</a>. But whether guidelines require it or not, I think we can all agree that predictable behavior in your applications, usually equates to a pretty positive user experience. If nothing else, it should be considered best practice.</p>
+<p>There are other ways to pass helpful text to assistive technology users, too. Some may not like the redundancy of text in <code>aria-label</code>, so you can do this:</p>
 
-<p>Here is another way that we can warn our users:</p>
+<pre><code>... &lt;a href="..." target="_blank"&gt;my link text <strong>&lt;span class="sr-only"&gt;(opens in new window)&lt;/span&gt;</strong>&lt;a&gt; ...</code></pre>
+
+<p>With this method, I am including visually hidden text that can still be accessed by assistive technology. I like doing it this way because it is progressive enhancment friendly, but to each their own. There are a thousand ways to handle visually hidden text and <a href="https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html">Scott O'Hara knows them all</a>.</p>
+
+<p>Finally, this is the most simple way to do it:</p>
 
 <pre><code>... &lt;a href="..." target="_blank"&gt;my link text (opens in new window)&lt;a&gt; ...</code></pre>
 
@@ -102,12 +106,13 @@ width: 14px;
 
 <p>Given all that could go wrong, whether it be by the hand of a front-end developer or content editor, sometimes the best decision may be not to launch new windows at all. This is a rule I often abide by personally. For clients, I would absolutely approach the launching of new windows with a healthy amount of caution, as a poor implementation can have a negative impact on users, and through that, a negative impact on your client's brand.</p>
 
-<p>Before signing off, let's recap what we should be doing:</p>
+<p>Before signing off, let's recap what we should be doing. Feel free to use this to succinctly educate colleagues and clients:</p>
 
 <ul>
-  <li>Trust Users -  The old ways are dead. Let your users decide if opening a new window is the best course of action.</li>
-  <li>Accessibility - If a new window is needed, use <code>aria-label</code> for assistive technology and include visual indicators.</li>
-  <li>Security & Performance - If a new window is needed, make use of <code>rel="noopener"</code>. This will prevent tabnabbing and improve page load between parent and child windows.</li>
+  <li>Ask Why - Have a really good reason as to why a new window should be opened. Opening new windows, just to keep users on your site, is not a good enough reason.</li>
+  <li>Trust Users -  Let your users decide if opening a new window is the best course of action.</li>
+  <li>Accessibility - If a new window is a necessity, use <code>aria-label</code> or alternative techniques for assistive technology and include visual indicators.</li>
+  <li>Security & Performance - If a new window is necessity, make use of <code>rel="noopener"</code>. This will prevent tabnabbing and improve page load between parent and child windows.</li>
 </ul>
 
 <p>Thank you for reading!</p>
