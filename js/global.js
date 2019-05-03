@@ -5,23 +5,29 @@
 
 	document.getElementsByTagName("html")[0].className = "js";
 
+	var sectionName = document.getElementsByTagName("body")[0].getAttribute("class");
+
 	var mainContent = document.getElementById("content");
 
-	// PWA Register
+	if (sectionName !== "video-hero-banner") {
 
-	if ("serviceWorker" in navigator) {
+		// PWA Register
 
-		window.addEventListener('load', function() {
+		if ("serviceWorker" in navigator) {
 
-			//Register the ServiceWorker
+			window.addEventListener('load', function() {
 
-			navigator.serviceWorker.register("/service-worker.js", {
+				//Register the ServiceWorker
 
-				scope: "./"
+				navigator.serviceWorker.register("/service-worker.js", {
+
+					scope: "./"
+
+				});
 
 			});
 
-		});
+		}
 
 	}
 
