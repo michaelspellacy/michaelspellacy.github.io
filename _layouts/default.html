@@ -4,9 +4,11 @@
 	<meta charset="{{site.charset}}">
 	<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
 	<meta content="noindex, nofollow" name="robots">{% endif %}
-	<meta content="article" name="og:type">
+	<meta content="article" name="og:type">{% if page.preview %}
+	<meta content="{{site.url}}{{page.preview}}" property="og:image">
+	<meta content="{{page.preview-alt}}" property="og:image:alt">{% else %}
 	<meta content="{{site.author-image}}?s=300" property="og:image">
-	<meta content="{{site.author-image-alt}}" property="og:image:alt">
+	<meta content="{{site.author-image-alt}}" property="og:image:alt">{% endif %}
 	<meta content="{{ page.title }}" property="og:title">{% if page.description %}
 	<meta content="{{ page.description }}" name="description">
 	<meta content="{{ page.description }}" property="og:description">{% endif %}
