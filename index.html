@@ -43,3 +43,21 @@ title: Michael Spellacy (Spell) - Front-end developer, designer and accessibilit
 
 {% endfor %}
 </ul>
+
+<h2>Bugs</h2>
+
+<ul>
+{% for post in site.posts %}
+
+{% if post.categories contains "bug" %}
+
+	<li>
+
+    <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+
+  </li>
+
+{% endif %}
+
+{% endfor %}
+</ul>
