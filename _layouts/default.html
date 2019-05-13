@@ -40,8 +40,6 @@
 
 		<a href="#content" id="skip-nav">Skip to main content</a>
 
-		<p class="alert"><strong>Excuse the mess! This site is undergoing an open redesign, so things may be a little broken and disorganized.</strong></p>
-
 		<header id="banner"{% if page.theme == "minify" %}class="minify"{% endif %}>
 
 			<a class="h-card" href="{{site.url}}" rel="me">
@@ -70,11 +68,16 @@
 
 				{{ content }}
 
-				<h3>An IndieWeb Webring</h3>
+				<nav>
 
-				<a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/previous">Previous Website</a>
+					<h3>An IndieWeb Webring <i class="fas fa-link"></i></h2>
 
-				<a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/next">Next Website</a>
+					<ul>
+						<li><a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/previous">Previous Website</a></li>
+						<li><a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/next">Next Website</a></li>
+					</ul>
+
+				</nav>
 
 			</article>
 

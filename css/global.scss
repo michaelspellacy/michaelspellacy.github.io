@@ -122,30 +122,28 @@ margin: 0;
 text-rendering: auto;
 -moz-osx-font-smoothing: auto;
 -webkit-font-smoothing: antialiased;
-}
 
-// Alert
 
-.alert {
-background-color: #a90329;
-color: white;
-font-size: 0.8em;
-margin: 0;
-padding: 0.9em;
-text-align: center;
+	&:before {
 
-	@media(min-width: 778px) {
+		background-color: #a90329;
+		color: white;
+		content: "Pardon the mess! This site is undergoing an open redesign, so things may be a little broken or disorganized for a little while.";
+		display: block;
+		font-size: 0.8em;
+		margin: 0;
+		padding: 0.9em;
+		text-align: center;
 
-		font-size: 1em;
+		@media(min-width: 778px) {
+
+			font-size: 1em;
+
+		}
 
 	}
 
-	strong {
-	font-weight: normal;
-	}
-
 }
-
 
 // Skip Navigation
 
