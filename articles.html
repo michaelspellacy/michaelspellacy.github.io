@@ -3,20 +3,20 @@ layout: default
 title: Articles
 ---
 
-<h1>{{page.title}}</h1>
-
-<p>I'm still new to this blogging business, but I have a lot to say and hope to post more! Here are the articles I have posted so far.</p>
+<p>I'm still new to this blogging business, but I have a lot to say and hope to post more! Here are the articles I have written so far.</p>
 
 <ul>
 {% for post in site.posts %}
 
-{% if post.categories contains "article" %}
+{% if post.tags contains "Articles" %}
 
 	<li>
 
-    <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+			<a href="{{ post.url }}">{{ post.title }}</a>
 
-  </li>
+			<p><b>Posted:</b> {{ post.date | date: '%B %d, %Y' }}</span>
+
+	</li>
 
 {% endif %}
 

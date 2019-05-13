@@ -1,0 +1,118 @@
+---
+layout: default
+description: "Some things to strongly consider before deciding to open a new browser window."
+title: "The Last Word (Maybe) on Opening New Windows"
+date: "2019-05-01 11:11:34"
+tags: Accessibility Articles Web
+---
+
+<p>From time to time, the question surrounding the opening of new windows (tabs) to external sites...pops up. (Sorry.) I thought I would share a few thoughts as to why we may want to think real hard before implementing this functionality. It is a touchy matter for some and has been discussed, <em>ad nauseam</em>, for years, so I might be beating a dead horse, but this is certainly how I have come to see and respond to the request over the last decade. Also, why repeat myself to friends and colleagues when I can just share this article when fresh controversy over this subject erupts again? I think it is a smart idea to be efficient with our time, since we have so little of it.</p>
+
+<h2>History Lesson</h2>
+
+<p>Let me tell you a little story. Back in the early days of the web, around the mid to late 90’s, we did a lot of <em>unusual</em> things in an effort to keep users on our sites. If websites were ever narcissistic and creepy, this was their heyday. <em>Hi, where ya going? Stick around and we’ll have some fun. Check out my Flash! Click on me. Don’t leave...please.</em> I think this sums up the experience back then pretty well, don't you? Overall, there was this rampant and irrational fear that if a user left your site, that they would never return. Let's be honest here. With a website going to such great lengths to keep us from leaving<em>&mdash;who'd want to stay?</em></p>
+
+<figure>
+
+  <img src="/media/2019-05-01-the-last-word-on-opening-new-windows/3000-years-ago.jpg" alt="Meme of Elrond from Lord of the Rings, saying 'I Was There 3000 Years Ago'">
+
+  <figcaption>Spell was there, when new windows ran rampant, 3000 years ago.</figcaption>
+
+</figure>
+
+<p>In later years, this effort was also combined with a misguided attempt to improve one’s SEO (Search Engine Optimization), so it was very commonplace to have every link that left your site, open in a new window. SEO specialists didn't like the idea of a user leaving a site because it supposedly hurt the "time on page" and bounce rate statistics. However, if a user is not on your site, then they are not on your site. Keeping the window open in the background is not an accurate (or honest) portrayal of usage. Now, combine all of this with hostile attempts to push ads into our faces by hijacking the user experience with popup windows and you have a recipe for a UX disaster, which it was. Suffice to say, this incident has left a long standing bad taste in our collective mouths.</p>
+
+<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to hold them hostage. <em>Say what?</em> Yes! Because we trust our users and have done our jobs to craft an experience that they will want or need to return to, no hacks or anti-patterns are required! It is often a smart idea to not make assumptions about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action. Your users are intelligent! Treat them as such. 'Nuff said.</p>
+
+<p>Personally, I always ask myself a simple question: Do I need a new window? 99% of the time the answer is no, but some functionality may demand it. I <em>never</em> open a new window because I don't want users to leave my site. That's just silly!</p>
+
+<p>If you would like to read another opinion on the subject, by a more reputable and well-known web design heavy-weight, then please check out <a href="https://css-tricks.com/use-target_blank/">When to use target="_blank"</a> by Chris Coyier. I am even linking to this article without opening it in a new window. <em>Meta!</em></p>
+
+<p>So what else might we want to consider before opening up new windows?</p>
+
+<h2>Accessibility</h2>
+
+<p>Opening up new windows can often be a poor experience for those among us who are disabled. Especially those with cognitive disabilities, who may find the creation of a new window, spawned without warning, to be disorienting. In addition to this, new windows also break the back button, which a lot of users, disabled or not, find very useful. If you must open a new window, then you had better do right by accessibility! Here is one way to handle it:</p>
+
+<pre><code>... &lt;a href="..." target="_blank" <strong>aria-label="my link text (opens in new window)"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
+
+<p>In this technique, I am using <code>aria-label</code> to repeat the link text and add an additional message that indicates that the link will open in a new window. The <code>aria-label</code> attribute will override the text within. We are not done yet, though. ARIA (Accessible Rich Internet Applications) will benefit some assistive technology users, but it won't cover <strong>all</strong> use cases, so we need to improve upon this a little more by adding a visual indicator, which often looks something like this:</p>
+
+<blockquote>
+
+  <p><em>I really enjoy what Jenn Simmons has to say about CSS Grid. Her <a href="https://labs.jensimmons.com/" target="_blank" aria-label="experimental layout lab (openes in new window)">experimental layout lab</a> has many wonderful examples to learn from.</em></p>
+
+</blockquote>
+
+<p>Here is the CSS that I use for this visual cue. Feel free to steal it!</p>
+
+<pre><code>a[target="_blank"]::after {
+background-color: transparent;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAV1BMVEUAAAAWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmFtOP0GAAAAHHRSTlMAj5fWItGGkZqc8tuwk3wn48aliIBwaGIqEskP9S1ThQAAAL1JREFUOMu9kt0OgjAMRruBg41/BATd+z+nriyN3VIvvODc0PCd0jYBLuGhu4pQWquIXQ/MjRdZsd/LzEF4ehkdhCJUjr1347dw+xT1qySGoQSbCgYYi08FxfLK/xYUZu3IhCw34JiQfr+Gg4/IctjxmQkV7TaEwqaC8tRXZiOo34Ig0HxJUHG+JCyxXxQ6yqURLeXSkvoOsnDyv9BDDvsnp94k9HiUPQUZe14ns+E2Tszj2fvcNEVOM20YvwFVpS/vjLAbQwAAAABJRU5ErkJggg==);
+background-position: center right;
+background-repeat: no-repeat;
+background-size: contain;
+content: "";
+display: inline-block;
+height: 14px;
+margin-left: 10px;
+vertical-align: middle;
+width: 14px;
+}</code></pre>
+
+<p>There are other ways to pass helpful text to assistive technology users, too. Some may not like the redundancy of text in <code>aria-label</code>, so you can do this:</p>
+
+<pre><code>... &lt;a href="..." target="_blank"&gt;my link text <strong>&lt;span class="sr-only"&gt;(opens in new window)&lt;/span&gt;</strong>&lt;a&gt; ...</code></pre>
+
+<p>With this method, I am including visually hidden text that can still be accessed by assistive technology. I like doing it this way because it is progressive enhancment friendly, but to each their own. There are a thousand ways to handle visually hidden text and <a href="https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html">Scott O'Hara knows them all</a>.</p>
+
+<p>Finally, this is the most simple way to do it:</p>
+
+<pre><code>... &lt;a href="..." target="_blank"&gt;my link text (opens in new window)&lt;a&gt; ...</code></pre>
+
+<blockquote>
+
+  <p><em>I really enjoy what Jenn Simmons has to say about CSS Grid. Her <a href="https://labs.jensimmons.com/" target="_new">experimental layout lab (opens in new window)</a> has many wonderful examples to learn from.</em></p>
+
+</blockquote>
+
+<p>I think I like this most of all! Simple and direct. Yes, it is a bit of a poor man's method, but it'll work in a pinch. There is no shame in it.</p>
+
+<h2>Security</h2>
+
+<p>Let's briefly talk about security. Full disclosure: I am no security expert, but I know enough to be dangerous. (In a good way&mdash;I swear!)</p>
+
+<p>A developer by the name of Mathias Bynens <a href="https://mathiasbynens.github.io/rel-noopener/">discovered that linking to pages with just <code>target="_blank"</code></a>, could leave your visitors exposed to <a href="https://www.owasp.org/index.php/Reverse_Tabnabbing">reverse tabnabbing</a>. The page you are <em>linking to</em>, if compromised, can gain full access to the <code>window.opener</code> object of the parent page. (Your website.) The parent page can then be redirected to a phishing page using <code>window.opener.location</code>. Since the user trusts the parent page they just left, they would have little reason to suspect that it has been hacked. Imagine your parent page beinging seamlessly redirected to a look-alike page, which then requests sensative information from your users! This is terrifying!</p>
+
+<p>To prevent this, it has been recommended that we should be including, in addition to our accessibility improvements, the following attribute:</p>
+
+<pre><code>... &lt;a href="..." target="_blank" aria-label="my link text (opens in new window)" <strong>rel="noopener"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
+
+<p>For older browsers, you would need to add <code>noreferrer</code>:</p>
+
+<pre><code>... &lt;a href="..." target="_blank" aria-label="my link text (opens in new window)" <strong>rel="noopener noreferrer"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
+
+<p>Browsers that support <code>rel="noopener"</code> can be found on <a href="https://caniuse.com/#feat=rel-noopener">Can I Use</a>.</p>
+
+<p><a href="https://developers.google.com/web/tools/lighthouse/audits/noopener">Google Lighthouse</a> even recommends that <code>rel="noopener"</code> be used on links that use <code>target="_blank"</code>.</p>
+
+<h2>Performance</h2>
+
+<p>Finally, it is has also been revealed that <code>target="_blank"</code>, when used alone, can cause a slight performance hit when a user is going from one page to another in a new window. Read <a href="https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/">The Performance Benefits of rel=noopener</a> by Jake Archibald. Once again, <code>rel="noopener"</code> can be helpful here, too! Users like zippy experiences, so why not oblige them whenever you can?</p>
+
+<h2>Conclusion</h2>
+
+<p>As you can see, there is much to consider before nonchalantly deciding to open new windows with good ol' <code>target="_blank"</code>. Throughout this article, I have been very careful to not outright deter use of <code>target="_blank"</code>, because there are times where you may need it. However, if you do choose to use it, you should strongly consider all I have mentioned above. This is information that should be shared with fellow colleagues and clients, who often make this request without understanding many of the complexities that may arise due to improper implementation of this functionality.</p>
+
+<p>Given all that could go wrong, whether it be by the hand of a front-end developer or content editor, sometimes the best decision may be not to launch new windows at all. This is a rule I often abide by personally. For clients, I would absolutely approach the launching of new windows with a healthy amount of caution, as a poor implementation can have a negative impact on users, and through that, a negative impact on your client's brand.</p>
+
+<p>Before signing off, let's recap what we should be doing. Feel free to use this to succinctly educate colleagues and clients:</p>
+
+<ul>
+  <li>Ask Why - Have a really good reason as to why a new window should be opened. Opening new windows, just to keep users on your site, is not a good enough reason.</li>
+  <li>Trust Users -  Let your users decide if opening a new window is the best course of action.</li>
+  <li>Accessibility - If a new window is a necessity, use <code>aria-label</code> or alternative techniques for assistive technology and include visual indicators.</li>
+  <li>Security & Performance - If a new window is a necessity, make use of <code>rel="noopener"</code>. This will prevent tabnabbing and improve page load between parent and child windows.</li>
+</ul>
+
+<p>Thank you for reading!</p>

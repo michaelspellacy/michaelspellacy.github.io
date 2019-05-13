@@ -1,63 +1,47 @@
 ---
 description: Spell is a web developer, designer and accessibility specialist living in beautiful Allentown, PA. In his spare time, he can be found restoring retro arcade machines.
 layout: default
-title: Michael Spellacy (Spell) - Front-end developer, designer and accessibility specialist
+metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessibility specialist
 ---
 
 <h1>Michael "Spell" Spellacy <span>Front-end developer, designer and accessibility specialist in  Allentown, PA</span></h1>
 
-<p>Hello! Nice of you to drop by. This site is undergoing an open redesign, so things will be broken and disorganized for quite a...wait for it...<em>spell!</em> See what I did there? Oh!</p>
-
-<h2>Articles</h2>
-
-<ul>
 {% for post in site.posts %}
 
-{% if post.categories contains "article" %}
+{% if post.tags contains "Notes" %}
 
-	<li>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-    <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+<time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
 
-  </li>
+{% if post.mf-photo %}
+
+  <img src="{{post.mf-photo}}" alt="">
+
+{% endif %}
+
+{{ post.content }}
 
 {% endif %}
 
 {% endfor %}
-</ul>
 
-<h2>Notes</h2>
+{% for category in site.tags %}
+
+<h2>{{ category[0] }}</h2>
 
 <ul>
-{% for post in site.posts %}
+{% for post in category[1] %}
 
-{% if post.categories contains "note" %}
+  <li>
 
-	<li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
 
-    <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+      <p><b>Posted:</b> {{ post.date | date: '%B %d, %Y' }}</span>
 
   </li>
-
-{% endif %}
 
 {% endfor %}
 </ul>
 
-<h2>Bugs</h2>
-
-<ul>
-{% for post in site.posts %}
-
-{% if post.categories contains "bug" %}
-
-	<li>
-
-    <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
-
-  </li>
-
-{% endif %}
-
 {% endfor %}
-</ul>
