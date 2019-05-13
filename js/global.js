@@ -31,20 +31,6 @@
 
 	}
 
-	// Webmention
-
-	/*
-
-	var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
-
-	url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
-	url = url && url[0] ? url[0].href : false;
-	sn.async = true;
-	sn.src = "https://webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
-	s.parentNode.insertBefore(sn, s);
-
-	*/
-
 	// Helper Functions
 
 	function insertAfter(el, referenceNode) {
