@@ -22,7 +22,7 @@ function loadWebMentions() {
   var url = document.URL;
 
   // fix dev url
-  url = url.replace(/^http:\/\/localhost:4000/, 'https://evertpot.com');
+  url = url.replace(/^http:\/\/localhost:4000/, 'https://spellacy.net');
 
   return fetch('https://webmention.io/api/mentions?per-page=200&target=' + url)
     .then( response => response.json() )
