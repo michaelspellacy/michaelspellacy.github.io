@@ -1,0 +1,10 @@
+---
+layout: micropubpost
+date: '2019-05-13T23:26:00.000Z'
+title: Enter the IndieWeb
+tags: Notes
+mf-post-status:
+  - published
+slug: enter-the-indie-web
+---
+I have been spending a lot of time lately, exploring the IndieWeb. I dig the idea of owning my online presence and content. I will post more as I learn about it, but today I got IndieAuth and Micropubs working on my site, which is run via Jekyll (GitHub Pages). I&#39;m pretty happy with it so far. Next up is Webmentions. Those look hard. 
