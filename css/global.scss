@@ -343,7 +343,13 @@ vertical-align: middle;
 }
 
 .post-img {
-max-width: 680px;
+
+	@media(min-width: 680px) {
+
+		max-width: 680px;
+
+	}
+
 }
 
 // How to Host an Infographic (HTML Fallback)
