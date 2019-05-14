@@ -10,7 +10,9 @@
 	<meta content="{{ site.author-image-alt }}" property="og:image:alt">{% endif %}
 	<meta content="{{ page.title }}" property="og:title">{% if page.description %}
 	<meta content="{{ page.description }}" name="description">
-	<meta content="{{ page.description }}" property="og:description">{% endif %}
+	<meta content="{{ page.description }}" property="og:description">{% elsif page.layout == "micropubpost" %}
+	<meta content="{{ page.content | truncate: 220 | strip_html }}" name="description">
+	<meta content="{{ page.content | truncate: 220 | strip_html }}" property="og:description">{% endif %}
 	<meta content="{{ site.theme-color }}" name="theme-color">
 	<link href="/css/global.css" rel="stylesheet">{% if page.localcss %}
 	<link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
@@ -31,7 +33,7 @@
 	Hello there! Come here my little friend. Don't be afraid.
 	It is nice to see somebody exploring the source code of a website.
 	If you are curious about any part of my site, feel free
-	to contact me. My email address is spell at spellacy.net
+	to contact me. My email address is spell@spellacy.net
 
 -->
 
