@@ -341,3 +341,123 @@ padding: 1em;
 .fa-creative-commons {
 vertical-align: middle;
 }
+
+// How to Host an Infographic (HTML Fallback)
+// NOTE: Styles removed from HTML version. To place back, remove "-off" from ".info-graphic-off" below.
+
+.info-graphic {
+
+	li {
+	font-weight: bold;
+
+		p {
+		font-weight: normal;
+		}
+
+	}
+
+}
+
+.info-graphic-off {
+border: 2px #ccc solid;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 0.7em;
+padding: 20px 40px;
+
+	h2 {
+	border-bottom: 6px #000 solid;
+	color: purple;
+	font-size: 2.1em;
+	margin: 0;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+
+		&::before {
+		background-image: url("https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg");
+		background-size: cover;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		font-weight: bold;
+		height: 100px;
+		margin-right: 0.5em;
+		vertical-align: middle;
+		width: 100px;
+		}
+
+	}
+
+	.infographic-subheading {
+	display: flex;
+	flex-wrap: wrap;
+
+		span {
+		flex: 0 50%;
+
+			&:nth-child(2) {
+			text-align: right;
+			}
+
+		}
+
+	}
+
+	.info-graphic-content {
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1.5;
+	list-style: none;
+	margin: 2em 0 0;
+	padding: 0;
+
+		li {
+		align-items: center;
+		display: flex;
+		flex: 0 50%;
+		margin-bottom: 2em;
+		}
+
+		h3 {
+		background-color: purple;
+		border-radius: 50%;
+		border: #673B9D 4px solid;
+		color: #fff;
+		font-weight: normal;
+		height: 100px;
+		margin: 0 1em 0 0;
+		min-width: 100px;
+		text-align: center;
+
+			i {
+			display: block;
+			font-size: 40px;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			}
+
+			span {
+			@extend .sr-only;
+			}
+
+		}
+
+		p {
+		margin: 0 1em 0 0;vertical-align: middle;
+	 	}
+
+	}
+
+	.infographic-source {
+	font-weight: bold;
+	margin-bottom: 0;
+	text-align: right;
+
+		a {
+		color: #000;
+		text-decoration: none;
+		}
+
+	}
+
+}
