@@ -31,11 +31,11 @@
 	Hello there! Come here my little friend. Don't be afraid.
 	It is nice to see somebody exploring the source code of a website.
 	If you are curious about any part of my site, feel free
-	to drop me a line. My email address is spell at spellacy.net
+	to contact me. My email address is spell at spellacy.net
 
 -->
 
-<body id="{{ page.path | replace:'.html',''| replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
+<body id="{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
 
 	<div id="page">
 
@@ -74,7 +74,7 @@
 
 				{% if page.date %}
 
-				<time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+				<time datetime="{{ page.date }}"><b>{{ page.date | date: "%B %d, %Y" }}</b></time>
 
 				{% endif %}
 

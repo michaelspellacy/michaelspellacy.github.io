@@ -17,7 +17,7 @@ license: https://creativecommons.org/licenses/by/4.0/
 markdown: kramdown
 name: Spellacy.net
 nickname: Spell
-permalink: none
+permalink: /:title/
 role: Front-end developer, designer and accessibility specialist
 sass:
   style: :compressed
