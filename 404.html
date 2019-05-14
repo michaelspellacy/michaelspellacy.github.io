@@ -3,4 +3,22 @@ layout: default
 title: Page Not Found
 ---
 
-<p>Sorry, but the page you were trying to view does not exist.</p>
+<p>Sorry, but the page you were trying to view does not exist. Please see posts listed below.</p>
+
+{% for category in site.tags %}
+
+<h2>{{ category[0] }}</h2>
+
+<ul>
+{% for post in category[1] %}
+
+  <li>
+
+      <a href="{{ post.url }}">{{ post.title }}</a>
+
+      <p><b>Published on {{ post.date | date: '%B %d, %Y' }}</b></p>
+
+  </li>
+
+{% endfor %}
+</ul>
