@@ -38,6 +38,14 @@ a {
 
 		}
 
+		&.no-icon {
+
+			&:after {
+			display: none;
+			}
+
+		}
+
   }
 
 }
