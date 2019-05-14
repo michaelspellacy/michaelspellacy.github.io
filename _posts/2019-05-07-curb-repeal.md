@@ -5,7 +5,7 @@ title: Curb Repeal
 tags: Accessibility Notes
 mf-post-status:
   - published
-slug: curp-repeal
+slug: curb-repeal
 mf-photo:
   - 'https://spellacy.net/media/2019-05-07-curb-repeal/1557781758722.jpg'
 ---
