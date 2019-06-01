@@ -66,6 +66,22 @@ width: 100%;
 
 figure {
 margin: 1em 0;
+
+	img {
+	border-radius: 10px;
+	border: 1px #ccc solid;
+	}
+
+}
+
+article > article {
+
+	@media(min-width: 600px) {
+
+		margin-left: 2em;
+
+	}
+
 }
 
 figcaption {
@@ -468,6 +484,32 @@ padding: 20px 40px;
 		text-decoration: none;
 		}
 
+	}
+
+}
+
+#indiewebring {
+background-color: {{ site.theme-color }};
+border-radius: 5px;
+bottom: 40px;
+left: 20px;
+padding: 10px;
+position: fixed;
+
+	ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+	li {
+	display: inline-block;
+	}
+
+	a {
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
 	}
 
 }
