@@ -489,7 +489,7 @@ padding: 20px 40px;
 }
 
 #indiewebring {
-background-color: {{ site.theme-color }};
+background-color: lighten({{ site.theme-color }}, 25%);
 border-radius: 5px;
 bottom: 40px;
 left: 20px;
