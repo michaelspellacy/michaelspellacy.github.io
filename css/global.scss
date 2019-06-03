@@ -489,14 +489,13 @@ padding: 20px 40px;
 }
 
 #indiewebring {
-background-color: #fff;
+background-color: lighten({{ site.theme-color }}, 5%);
 border-radius: 5px;
-bottom: 40px;
+bottom: 20px;
 right: 20px;
 padding: 5px;
 position: fixed;
-color: #000;
-border: 3px solid {{ site.theme-color }};
+color: #fff;
 
 	ul {
 	list-style: none;
