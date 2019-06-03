@@ -9,17 +9,27 @@ metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessib
 
 {% if post.tags contains "Notes" %}
 
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<article class="h-entry">
 
-<time datetime="{{ post.date }}"><b>{{ post.date | date: "%B %d, %Y" }}</b></time>
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-{% if post.mf-photo %}
+  <time datetime="{{ post.date }}"><b>{{ post.date | date: "%B %d, %Y" }}</b></time>
 
-  <img src="{{post.mf-photo}}" class="post-img" alt="">
+  {% if post.mf-photo %}
 
-{% endif %}
+  <figure>
 
-{{ post.content }}
+    <img src="{{post.mf-photo}}" class="post-img" alt="">
+
+  </figure>
+
+  <!-- figcaption></figcaption -->
+
+  {% endif %}
+
+  {{ post.content }}
+
+</article>
 
 {% endif %}
 
