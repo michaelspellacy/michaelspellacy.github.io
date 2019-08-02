@@ -118,7 +118,7 @@ layout: null
 
 		try {
 
-			await navigator.share({ title: document.title.replace(" - Spellacy.net", ""), url: document.URL });
+			await navigator.share({ title: document.title.replace(" - {{site.name}}", ""), url: document.URL });
 
 			console.log("Data was shared successfully");
 
