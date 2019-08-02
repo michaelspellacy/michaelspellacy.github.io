@@ -8,6 +8,6 @@ mf-post-status:
 slug: morning-walk-the-snapping-turtle
 mf-photo:
   - >-
-    https://spellacy.net/media/2019-05-morning-walk-the-snapping-turtle/1559138968492.jpg
+    https://michaelspellacy.com/media/2019-05-morning-walk-the-snapping-turtle/1559138968492.jpg
 ---
-Am I not turtley enough for the turtle club? Turtle, turtle, turtle! Beth and I spotted this big snapping turtle today. So cool. I love turtles! 
+Am I not turtley enough for the turtle club? Turtle, turtle, turtle! Beth and I spotted this big snapping turtle today. So cool. I love turtles!

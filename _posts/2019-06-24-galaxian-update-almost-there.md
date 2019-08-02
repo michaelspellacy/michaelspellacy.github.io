@@ -8,8 +8,8 @@ mf-post-status:
 slug: galaxian-update-almost-there
 mf-photo:
   - >-
-    https://spellacy.net/media/2019-06-galaxian-update-almost-there/1561402330707.jpg
+    https://michaelspellacy.com/media/2019-06-galaxian-update-almost-there/1561402330707.jpg
 ---
-I had meant to post this a few days ago, but the cabinet itself is done and all that is left to do is install the electronic components! Wish me luck because that is truly the hard part! 
+I had meant to post this a few days ago, but the cabinet itself is done and all that is left to do is install the electronic components! Wish me luck because that is truly the hard part!
 
-I&#39;m somewhat impressed with my newfound skills here. 
+I&#39;m somewhat impressed with my newfound skills here.

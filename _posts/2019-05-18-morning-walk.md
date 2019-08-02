@@ -11,6 +11,6 @@ mf-post-status:
   - published
 slug: morning-walk
 mf-photo:
-  - 'https://spellacy.net/media/2019-05-morning-walk/1558197699613.jpg'
+  - 'https://michaelspellacy.com/media/2019-05-morning-walk/1558197699613.jpg'
 ---
-Pennsylvania is beautiful country. This is practically in my back yard. Moments like these remind me of the Staten Island of my youth. (Where I&#39;m originally from.) I am glad that our kids get to experience green, wide-open living, like this. Hopefully we can save it for our grandkids. 
+Pennsylvania is beautiful country. This is practically in my back yard. Moments like these remind me of the Staten Island of my youth. (Where I&#39;m originally from.) I am glad that our kids get to experience green, wide-open living, like this. Hopefully we can save it for our grandkids.

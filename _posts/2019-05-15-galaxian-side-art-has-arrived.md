@@ -8,6 +8,6 @@ mf-post-status:
 slug: galaxian-side-art-has-arrived
 mf-photo:
   - >-
-    https://spellacy.net/media/2019-05-galaxian-side-art-has-arrived/1557957809626.jpg
+    https://michaelspellacy.com/media/2019-05-galaxian-side-art-has-arrived/1557957809626.jpg
 ---
-Of course, I&#39;m nowhere near being able to apply it yet, but it still has me excited! So sexy! 
+Of course, I&#39;m nowhere near being able to apply it yet, but it still has me excited! So sexy!

@@ -8,6 +8,6 @@ mf-post-status:
 slug: galaxian-update-coin-door-restored
 mf-photo:
   - >-
-    https://spellacy.net/media/2019-05-galaxian-update-coin-door-restored/1559218110733.jpg
+    https://michaelspellacy.com/media/2019-05-galaxian-update-coin-door-restored/1559218110733.jpg
 ---
-I finished the Galaxian coin door today. The color is not 100% to my liking, but it will do and still harkens back to the original. Most people just paint them black because it is easier than matching color. The door is pretty easy to pop off and take apart, so if ever I land on the right color for it, then I will revisit. In the future, I will have a longer article detailing all the work and products used in this restoration. 
+I finished the Galaxian coin door today. The color is not 100% to my liking, but it will do and still harkens back to the original. Most people just paint them black because it is easier than matching color. The door is pretty easy to pop off and take apart, so if ever I land on the right color for it, then I will revisit. In the future, I will have a longer article detailing all the work and products used in this restoration.

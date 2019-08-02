@@ -7,7 +7,7 @@ mf-post-status:
   - published
 slug: the-10-rules-of-joy
 mf-photo:
-  - 'https://spellacy.net/media/2019-06-the-10-rules-of-joy/1559515749583.jpg'
+  - 'https://michaelspellacy.com/media/2019-06-the-10-rules-of-joy/1559515749583.jpg'
 ---
 My daughter, Joy, has some rules for all you people, so you had better get with it!  Especially if you are boy!
 
@@ -22,6 +22,4 @@ My daughter, Joy, has some rules for all you people, so you had better get with 
 9. Boys are the worst
 10. Girls rock and boys smell
 
-Damn straight, Joy. 
-
-
+Damn straight, Joy.

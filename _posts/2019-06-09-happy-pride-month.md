@@ -7,6 +7,6 @@ mf-post-status:
   - published
 slug: happy-pride-month
 mf-photo:
-  - 'https://spellacy.net/media/2019-06-happy-pride-month/1560103446679.jpg'
+  - 'https://michaelspellacy.com/media/2019-06-happy-pride-month/1560103446679.jpg'
 ---
-Sass wanted to celebrate #pride, so the kids made it happen. Peace and love to all! 
+Sass wanted to celebrate #pride, so the kids made it happen. Peace and love to all!
