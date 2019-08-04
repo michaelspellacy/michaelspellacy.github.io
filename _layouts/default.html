@@ -8,7 +8,7 @@
 	<meta content="{{ page.mf-photo }}" property="og:image">{% else %}
 	<meta content="{{ site.author-image }}?s=600" property="og:image">
 	<meta content="{{ site.author-image-alt }}" property="og:image:alt">{% endif %}
-	<meta content="{{ page.title }}" property="og:title">{% if page.description %}
+	<meta content="{{ page.title }}{{ page.metatitle }}" property="og:title">{% if page.description %}
 	<meta content="{{ page.description }}" name="description">
 	<meta content="{{ page.description }}" property="og:description">{% elsif page.layout == "micropubpost" %}
 	<meta content="{{ page.content | truncate: 220 | strip_html }}" name="description">
@@ -102,9 +102,9 @@
 			<nav id="indiewebring" aria-label="IndieWeb Webring">
 
 				<ul>
-					<li><a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/previous" aria-label="Previous Website">&#8592;</a></li>
+					<li><a href="https://xn--sr8hvo.ws/%F0%9F%8D%BC%F0%9F%88%B2%F0%9F%91%A3/previous" aria-label="Previous Website">&#8592;</a></li>
 					<li><a href="https://xn--sr8hvo.ws/" aria-label="An IndieWeb Webring">💍</a></li>
-					<li><a href="https://xn--sr8hvo.ws/%F0%9F%9A%9B%F0%9F%8F%A3%E2%99%8D%EF%B8%8F/next" aria-label="Next Website">&#8594;</a></li>
+					<li><a href="https://xn--sr8hvo.ws/%F0%9F%8D%BC%F0%9F%88%B2%F0%9F%91%A3/next" aria-label="Next Website">&#8594;</a></li>
 				</ul>
 
 			</nav>
