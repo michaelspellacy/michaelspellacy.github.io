@@ -5,7 +5,7 @@
 @import url("monokai.css");
 
 html {
-box-sizing: border-box; 
+box-sizing: border-box;
 }
 
 *, *::before, *::after {
@@ -147,6 +147,12 @@ text-rendering: auto;
 -moz-osx-font-smoothing: auto;
 -webkit-font-smoothing: antialiased;
 
+	@media (prefers-color-scheme: dark) {
+
+		background-color: black;
+		color: white;
+
+	}
 
 	&:before {
 
