@@ -2,7 +2,7 @@
 layout: micropubpost
 date: '2019-05-14T01:13:00.000Z'
 title: 'Coming Soon: The Galaxian Restoration '
-tags: Arcade Notes
+tags: Notes Arcade Galaxian
 mf-post-status:
   - published
 slug: coming-soon-the-galaxian-restoration

@@ -2,7 +2,7 @@
 layout: micropubpost
 date: '2019-10-22T22:35:00.000Z'
 title: 'Galaxian Update: Restoration Complete!'
-tags: Notes
+tags: Notes Arcade Galaxian
 mf-post-status:
   - published
 slug: galaxian-update-restoration-complete

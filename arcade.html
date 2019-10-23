@@ -1,0 +1,23 @@
+---
+title: Arcade Restorations
+---
+
+<p>There is not much to see here yet, but I hope to produce some more detailed posts of my restoration projects soon.</p>
+
+<ul>
+{% for post in site.posts %}
+
+{% if post.tags contains "Arcade" %}
+
+	<li>
+
+			<a href="{{ post.url }}">{{ post.title }}</a>
+
+			<p><b>Published on {{ post.date | date: '%B %d, %Y' }}</b></p>
+
+	</li>
+
+{% endif %}
+
+{% endfor %}
+</ul>

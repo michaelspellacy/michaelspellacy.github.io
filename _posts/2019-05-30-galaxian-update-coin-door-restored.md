@@ -2,7 +2,7 @@
 layout: micropubpost
 date: '2019-05-30T12:08:00.000Z'
 title: 'Galaxian Update: Coin Door Restored! '
-tags: Notes Galaxian Arcade
+tags: Notes Arcade Galaxian
 mf-post-status:
   - published
 slug: galaxian-update-coin-door-restored

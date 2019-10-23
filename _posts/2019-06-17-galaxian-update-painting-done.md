@@ -2,7 +2,7 @@
 layout: micropubpost
 date: '2019-06-17T12:42:00.000Z'
 title: 'Galaxian Update: Painting Done!'
-tags: Galaxian Arcade Notes
+tags: Notes Arcade Galaxian
 mf-post-status:
   - published
 slug: galaxian-update-painting-done
