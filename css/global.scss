@@ -162,7 +162,7 @@ text-rendering: auto;
 		display: block;
 		font-size: 0.8em;
 		margin: 0;
-		padding: 0.9em;
+		padding: 0.9em 3em;
 		text-align: center;
 
 		@media(min-width: 778px) {
@@ -251,6 +251,44 @@ text-align: center;
 			font-size: 0.9em;
 			padding: 0.3em;
 			}
+
+		}
+
+	}
+
+}
+
+#webmentions-logo {
+position: absolute;
+top: 0;
+right: 0;
+z-index: 1;
+
+	&::before {
+	border-left: 50px solid transparent;
+	border-top: 50px solid white;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+
+		@media(min-width: 680px) {
+
+			border-left-width: 100px;
+			border-top-width: 100px;
+
+		}
+
+	}
+
+	img {
+	width: 25px;
+	position: relative;
+
+		@media(min-width: 680px) {
+
+			width: 52px;
 
 		}
 
