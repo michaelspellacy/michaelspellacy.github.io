@@ -15,11 +15,11 @@ box-sizing: inherit;
 a {
 color: #4a2376;
 
-	//@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) {
 
 		color: #6f459d;
 
-	// }
+	}
 
 	&[target="_blank"] {
 
@@ -154,12 +154,12 @@ text-rendering: auto;
 -moz-osx-font-smoothing: auto;
 -webkit-font-smoothing: antialiased;
 
-	//@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) {
 
 		background-color: black;
 		color: white;
 
-//	}
+	}
 
 	&:before {
 
