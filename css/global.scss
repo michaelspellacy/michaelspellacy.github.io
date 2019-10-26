@@ -211,10 +211,9 @@ padding: 2vw;
 position: relative;
 text-align: center;
 
-@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: dark) {
 
 		background-image: url("../img/background-2.jpg");
-		background-size: contain;
 
 	}
 
