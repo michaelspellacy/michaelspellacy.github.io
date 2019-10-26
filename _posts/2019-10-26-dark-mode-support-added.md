@@ -19,4 +19,4 @@ Did you know that websites support dark mode, too? It&#39;s true. All the cool k
 
  }
 ```
-You can learn more about `prefers-color-sceme` on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+You can learn more about `prefers-color-scheme` on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
