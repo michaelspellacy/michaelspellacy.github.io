@@ -5,35 +5,49 @@ metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessib
 
 <h1>Michael "Spell" Spellacy <span>Front-end developer, designer and accessibility specialist in  Allentown, PA</span></h1>
 
-{% for post in site.posts %} 
+<div class="article-group" style="display: flex; flex-flow: row wrap; justify-content: space-between;">
 
-{% if post.tags contains "Notes" %}
+  {% for post in site.posts %}
 
-<article class="h-entry">
+  {% if post.tags contains "Notes" %}
 
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <article class="h-entry h-post">
 
-  <time datetime="{{ post.date }}"><b>{{ post.date | date: "%B %d, %Y" }}</b></time>
+    <div>
 
-  {% if post.mf-photo %}
+      <img src="{{ site.author-image }}?s=50" alt="">
 
-  <figure>
+    </div>
 
-    <img src="{{post.mf-photo}}" class="post-img" alt="">
+    <div>
 
-  </figure>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-  <!-- figcaption></figcaption -->
+      <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
+
+      <p>{{ post.content | truncate: 220 | strip_html }}</p>
+
+      {% if post.mf-photo %}
+
+      <figure>
+
+        <img src="{{post.mf-photo}}" alt="" class="post-img">
+
+      </figure>
+
+      <!-- figcaption></figcaption -->
+
+    {% endif %}
+
+    </div>
+
+  </article>
 
   {% endif %}
 
-  {{ post.content }}
+  {% endfor %}
 
-</article>
-
-{% endif %}
-
-{% endfor %}
+</div>
 
 {% for category in site.tags %}
 

@@ -77,6 +77,16 @@ margin: 1em 0;
 	img {
 	border-radius: 10px;
 	border: 1px #ccc solid;
+
+		.h-post & {
+
+			height: 400px;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+
+		}
+
 	}
 
 }
@@ -140,6 +150,17 @@ word-wrap: break-word;
 img {
 display: block;
 max-width: 100%;
+
+	.h-post & {
+
+		&:not(.post-img) {
+
+			max-width: none;
+
+		}
+
+	}
+
 }
 
 body {
@@ -363,6 +384,70 @@ margin-bottom: 1em;
 main, footer {
 font-size: 1.4em;
 margin: 1em;
+}
+
+.h-post {
+display: flex;
+align-items: flex-start;
+position: relative;
+padding: 1em;
+width: 100%;
+margin-bottom: 1em;
+
+	h2 {
+	margin: 3px 0 10px;
+	line-height: 1;
+
+		a {
+
+			// Where the magic happens...
+
+			&::before {
+			bottom: 0;
+			content: "";
+			display: block;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			}
+
+
+				&:focus, &:hover {
+
+					&::before {
+					background-color: #ccc;
+					opacity: .1;
+					border-radius: 10px;
+					border: 5px #888 solid;
+					}
+
+				}
+
+		}
+
+	}
+
+	time {
+	color: #888;
+	font-weight: bold;
+	font-size: 0.9em;
+	}
+
+	div {
+	margin-right: 1em;
+
+		&:last-child {
+		margin-right: 0;
+		}
+
+
+		> img {
+		border-radius: 50%;
+		}
+
+	}
+
 }
 
 #social {
