@@ -2,6 +2,7 @@
 layout: micropubpost
 date: '2019-10-31T12:54:00.000Z'
 title: Happy Halloween!
+tags: Notes
 mf-post-status:
   - published
 slug: happy-halloween
