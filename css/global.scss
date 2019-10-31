@@ -80,10 +80,16 @@ margin: 1em 0;
 
 		.h-post & {
 
-			height: 400px;
+			height: 200px;
 			object-fit: cover;
 			object-position: center;
 			width: 100%;
+
+				@media(min-width: 680px) {
+
+					height: 400px;
+
+				}
 
 		}
 
@@ -390,13 +396,19 @@ margin: 1em;
 display: flex;
 align-items: flex-start;
 position: relative;
-padding: 1em;
 width: 100%;
 margin-bottom: 1em;
 
+	@media(min-width: 680px) {
+
+		padding: 1em;
+
+	}
+
 	h2 {
 	margin: 3px 0 10px;
-	line-height: 1;
+	font-size: 1.2em;
+	line-height: normal;
 
 		a {
 
@@ -444,6 +456,10 @@ margin-bottom: 1em;
 
 		> img {
 		border-radius: 50%;
+		}
+
+		p {
+		font-size: .9em;
 		}
 
 	}
