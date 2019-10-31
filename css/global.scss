@@ -74,6 +74,18 @@ width: 100%;
 figure {
 margin: 1em 0;
 
+
+	.h-post & {
+	margin-left: -72px;
+
+		@media(min-width: 680px) {
+
+			margin-left: 0;
+
+		}
+
+	}
+
 	img {
 	border-radius: 10px;
 	border: 1px #ccc solid;
@@ -84,6 +96,7 @@ margin: 1em 0;
 			object-fit: cover;
 			object-position: center;
 			width: 100%;
+
 
 				@media(min-width: 680px) {
 
@@ -398,6 +411,7 @@ align-items: flex-start;
 position: relative;
 width: 100%;
 margin-bottom: 1em;
+padding: 10px;
 
 	@media(min-width: 680px) {
 
