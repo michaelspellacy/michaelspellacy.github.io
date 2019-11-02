@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% if page.mf-in-reply-to %}
+
+<p><b>In Reply To:</b> <a href="{{page.mf-in-reply-to}}">{{page.mf-in-reply-to}}</a></p>
+
+{% endif %}
+
 {% if page.mf-photo %}
 
   <figure>
