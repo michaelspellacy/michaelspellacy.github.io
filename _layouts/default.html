@@ -88,7 +88,7 @@
 
 				{% if page.mf-in-reply-to %}
 
-				<p><b>In Reply To:</b> <a href="{{page.mf-in-reply-to}}" class="u-in-reply-to">{{page.mf-in-reply-to}}</a></p>
+				<p class="reply-to"><a href="{{page.mf-in-reply-to}}" class="u-in-reply-to">Reply to {{page.mf-in-reply-to}}</a></p>
 
 				{% endif %}
 
@@ -110,7 +110,11 @@
 
 				</div>
 
-				<time class="dt-published" datetime="{{ page.date }}"><b>{{ page.date | date: "%B %d, %Y" }}</b></time>
+				<a href="/{{page.slug}}" class="u-url">
+
+        	<time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+
+				</a>
 
 				<div class="u-author h-card">
 
