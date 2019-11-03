@@ -2,22 +2,30 @@
 layout: default
 ---
 
-{% if page.mf-in-reply-to %}
+<div class="h-entry">
 
-<p><b>In Reply To:</b> <a href="{{page.mf-in-reply-to}}">{{page.mf-in-reply-to}}</a></p>
+  {% if page.mf-in-reply-to %}
 
-{% endif %}
+  <p><b>In Reply To:</b> <a href="{{page.mf-in-reply-to}}" class="u-in-reply-to">{{page.mf-in-reply-to}}</a></p>
 
-{% if page.mf-photo %}
+  {% endif %}
 
-  <figure>
+  <div class="e-content">
 
-    <img src="{{page.mf-photo}}" alt="" class="post-img">
+    {% if page.mf-photo %}
 
-  </figure>
+      <figure>
 
-  <!-- figcaption></figcaption -->
+        <img src="{{page.mf-photo}}" alt="" class="post-img">
 
-{% endif %}
+      </figure>
 
-{{ content }}
+      <!-- figcaption></figcaption -->
+
+    {% endif %}
+
+    {{ content }}
+
+  </div>
+
+</div>
