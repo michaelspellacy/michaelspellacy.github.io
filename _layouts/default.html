@@ -92,8 +92,6 @@
 
 				{% endif %}
 
-				<time class="dt-published" datetime="{{ page.date }}"><b>{{ page.date | date: "%B %d, %Y" }}</b></time>
-
 				<div class="e-content">
 
 					{% if page.mf-photo %}
@@ -111,6 +109,8 @@
 					{{ content }}
 
 				</div>
+
+				<time class="dt-published" datetime="{{ page.date }}"><b>{{ page.date | date: "%B %d, %Y" }}</b></time>
 
 				<div class="u-author h-card">
 
