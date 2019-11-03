@@ -3,7 +3,7 @@ layout: micropubpost
 date: '2019-10-30T12:38:00.000Z'
 title: Webmentions Rock!
 mf-in-reply-to:
-  - 'https://andregarzia.com/2019/10/adding-indieweb-support-to-this-site.html'
+  - 'https://aaronparecki.com/2018/06/30/11/your-first-webmention'
 tags: Notes
 mf-post-status:
   - published
