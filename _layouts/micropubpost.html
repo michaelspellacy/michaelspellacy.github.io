@@ -2,38 +2,4 @@
 layout: default
 ---
 
-<div class="h-entry">
-
-  <div class="u-author h-card">
-
-    <img src="{{ site.author-image }}?s=50" class="u-photo" alt="{{ site.author }}">
-
-    <a href="https://michaelspellacy.com/" class="u-url p-name">Michael Spellacy</a>
-
-  </div>
-
-  {% if page.mf-in-reply-to %}
-
-  <p><b>In Reply To:</b> <a href="{{page.mf-in-reply-to}}" class="u-in-reply-to">{{page.mf-in-reply-to}}</a></p>
-
-  {% endif %}
-
-  <div class="e-content">
-
-    {% if page.mf-photo %}
-
-      <figure>
-
-        <img src="{{page.mf-photo}}" alt="" class="post-img">
-
-      </figure>
-
-      <!-- figcaption></figcaption -->
-
-    {% endif %}
-
-    {{ content }}
-
-  </div>
-
-</div>
+{{ content }}
