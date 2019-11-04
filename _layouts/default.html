@@ -120,14 +120,12 @@
 
 			</article>
 
-			<form method="post" class="webmention-send" action="https://webmention.herokuapp.com/api/webmention">
-
-				<input type="hidden" name="target" value="http://0xadada.pub/2019/09/13/2307-webmention-reply/">
+			<form method="post" class="webmention-send" action="https://telegraph.p3k.io/webmention">
 
 				<label for="source">Have a reply, or comment? Send your URL:</label>
-
 				<input type="url" id="source" name="source">
-
+				<input type="hidden" name="token" value="iL1IEoybswLpPyKGfEDvPvmP2G3PlMEm">
+				<input type="hidden" name="target" value="/{{page.slug}}/{{page.slug}}/">
 				<input type="submit" value="Send Webmention">
 
 			</form>
