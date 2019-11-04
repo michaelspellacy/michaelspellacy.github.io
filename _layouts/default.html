@@ -82,7 +82,7 @@
 
 				{% if page.title != "" %}
 
-				<h1>{{page.title}}</h1>
+				<h1 class="p-name">{{page.title}}</h1>
 
 				{% endif %}
 
@@ -110,19 +110,13 @@
 
 				</div>
 
-				<a href="/{{page.slug}}" class="u-url">
-
-        	<time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-
-				</a>
-
-				<div class="u-author h-card">
+				<p class="u-author h-card">
 
 					<img src="{{ site.author-image }}?s=50" class="u-photo" alt="{{ site.author }}">
 
-					<a href="{{ site.url }}" class="u-url p-name">{{ site.author }} ({{ site.nickname }})</a>
+					Published by <a href="{{ site.url }}" class="u-url p-name">{{ site.author }} ({{ site.nickname }})</a> on <a href="/{{page.slug}}" class="u-url"><time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
 
-				</div>
+				</p>
 
 			</article>
 
