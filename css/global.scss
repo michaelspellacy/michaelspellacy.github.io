@@ -748,6 +748,7 @@ margin: 2em 0;
 	padding: 1em;
   width: 100%;
 	border: #ccc 1px solid;
+	border-radius: 5px;
 
 		@media(min-width: 778px) {
 
@@ -762,10 +763,44 @@ margin: 2em 0;
 	color: #fff;
 	background-color: #6f459d;
 	border: 0;
+	border-radius: 5px;
 	}
 
 }
 
+
+
 .webmention-container {
 margin: 1em 0;
+}
+
+.webmention-mention {
+
+	padding: 1em;
+	border: 1px #ccc solid;
+	border-radius: 5px;
+
+}
+
+.webmention-author {
+
+	a {
+	display: inline-block;
+	}
+
+	img {
+	display: inline-block;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: .5em;
+	}
+
+}
+
+.webmention-name {
+display: none;
+}
+
+.webmention-summary {
+margin: .5em 0;
 }
