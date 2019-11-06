@@ -664,7 +664,8 @@ padding: 20px 40px;
 		}
 
 		p {
-		margin: 0 1em 0 0;vertical-align: middle;
+		margin: 0 1em 0 0;
+		vertical-align: middle;
 	 	}
 
 	}
@@ -733,19 +734,28 @@ margin: 2em 0;
 
 	img {
 	border-radius: 50%;
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
+
+
+			@media(min-width: 778px) {
+
+				display: inline-block;
+				vertical-align: middle;
+
+			}
+
 	}
 
 }
 
 .webmention-send {
+margin: 1em 0;
 
 	input {
 	display: block;
 	width: auto;
 	margin: 1em 0;
-	padding: 1em;
+	padding: 1.3em;
   width: 100%;
 	border: #ccc 1px solid;
 	border-radius: 5px;
@@ -759,7 +769,7 @@ margin: 2em 0;
 	}
 
 	button {
-	padding: 1em;
+	padding: 1.5em;
 	color: #fff;
 	background-color: #6f459d;
 	border: 0;
