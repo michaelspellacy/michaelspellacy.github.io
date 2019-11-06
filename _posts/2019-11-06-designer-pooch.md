@@ -11,8 +11,10 @@ mf-photo:
 ---
 My very messy, yet adorable dog, Sass. Yes, she was named after the CSS extension language, Sass.
 
+```cli
 sass --sit
 sass --watch
-sass --heel 
+sass --heel
+```
 
 Good dog. ❤️

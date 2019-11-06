@@ -100,9 +100,21 @@
 
 				{% endif %}
 
-                                {% if page.mf-bookmark-of %}
+				{% if page.mf-bookmark-of %}
 
 				<p class="reply-to">Bookmark of <a href="{{page.mf-bookmark-of}}" class="u-bookmark-of">{{page.mf-bookmark-of}}</a></p>
+
+				{% endif %}
+
+				{% if page.mf-repost-of %}
+
+				<p class="reply-to">Repost of <a href="{{page.mf-repost-of}}" class="u-repost-of">{{page.mf-repost-of}}</a></p>
+
+				{% endif %}
+
+				{% if page.mf-like-of %}
+
+				<p class="reply-to"><span aria-hidden="true">❤️</span> Like of <a href="{{page.mf-like-of}}" class="u-like-of">{{page.mf-like-of}}</a></p>
 
 				{% endif %}
 
