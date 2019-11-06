@@ -86,6 +86,14 @@
 
 				{% endif %}
 
+				<p class="u-author h-card">
+
+					<img src="{{ site.author-image }}?s=50" class="u-photo" alt="{{ site.author }}">
+
+					Published by <a href="{{ site.url }}" class="u-url p-name">{{ site.author }} ({{ site.nickname }})</a> on <a href="/{{page.slug}}" class="u-url"><time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
+
+				</p>
+
 				{% if page.mf-in-reply-to %}
 
 				<p class="reply-to">Reply to <a href="{{page.mf-in-reply-to}}" class="u-in-reply-to">{{page.mf-in-reply-to}}</a></p>
@@ -110,25 +118,19 @@
 
 				</div>
 
-				<p class="u-author h-card">
-
-					<img src="{{ site.author-image }}?s=50" class="u-photo" alt="{{ site.author }}">
-
-					Published by <a href="{{ site.url }}" class="u-url p-name">{{ site.author }} ({{ site.nickname }})</a> on <a href="/{{page.slug}}" class="u-url"><time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
-
-				</p>
-
 			</article>
 
 			<form method="post" class="webmention-send" action="https://telegraph.p3k.io/webmention">
 
 				<label for="source">Have a reply, or comment? Send your URL:</label>
-				<input type="url" id="source" name="source">
+				<input type="url" placeholder="https://your-site.com/your-reply/" id="source" name="source">
 				<input type="hidden" name="token" value="PSYxM7GRDQzEaN3La4Xuh2RzlVKoL2Gc">
 				<input type="hidden" name="target" value="{{site.url}}/{{page.slug}}/">
-				<input type="submit" value="Send Webmention">
+				<button type="submit">Send Webmention</button>
 
 			</form>
+
+			<!-- script id="webmention-hosted" src="https://webmention.herokuapp.com/api/embed?example"></script-->
 
 			<script id="webmention-hosted">
 
