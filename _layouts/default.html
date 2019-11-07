@@ -141,7 +141,7 @@
 			<form method="post" class="webmention-send" action="https://telegraph.p3k.io/webmention">
 
 				<label for="source">Have a reply, or comment? Send your URL:</label>
-				<input type="url" placeholder="https://your-site.com/your-reply/" id="source" name="source">
+				<input type="url" placeholder="https://your-site.com/your-reply/" id="source" name="source" required>
 				<input type="hidden" name="token" value="PSYxM7GRDQzEaN3La4Xuh2RzlVKoL2Gc">
 				<input type="hidden" name="target" value="{{site.url}}/{{page.slug}}/">
 				<button type="submit">Send Webmention</button>
