@@ -4,7 +4,7 @@ date: '2019-11-07T14:30:09.061Z'
 title: Accessibility Testing Statistic
 mf-bookmark-of:
   - 'https://twitter.com/webaxe/status/1192447675129401347'
-tags: Notes
+tags: Notes Accessibility
 slug: accessibility-testing
 category: links
 ---
