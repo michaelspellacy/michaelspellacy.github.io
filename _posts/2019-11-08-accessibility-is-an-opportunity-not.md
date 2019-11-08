@@ -5,7 +5,7 @@ title: 'Accessibility is an opportunity, not a burden'
 mf-bookmark-of:
   - >-
     https://venturebeat.com/2019/11/03/accessibility-is-an-opportunity-not-a-burden/
-tags: Notes
+tags: Notes Accessibility
 slug: accessibility-is-an-opportunity-not
 category: links
 ---
