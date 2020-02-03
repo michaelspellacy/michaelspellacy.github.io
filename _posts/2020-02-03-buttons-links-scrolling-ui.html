@@ -1,0 +1,153 @@
+---
+layout: micropubpost
+description: "Some musings on links vs. buttons as well as some thoughts on scrolling user interfaces."
+title: "On Buttons, Links and Scrolling User Interfaces"
+date: "2020-02-03 11:11:34"
+tags: Accessibility Articles Web
+---
+
+<style>
+
+.section, #toc {
+padding: 1em;
+border-radius: 10px;
+border: 1px transparent solid;
+}
+
+.section:target, #toc:target {
+transition: all 300ms 1.2s ease-in-out;
+background-color: #eee;
+border: 1px #000 solid;
+}
+
+</style>
+
+<nav id="toc" aria-label="table of contents">
+
+  <ul>
+    <li><a href="#buttons-vs-links">Buttons vs. Links</a></li>
+    <li><a href="#understanding-roles">Understanding Roles</a></li>
+    <li><a href="#hyperlink-suppression">Hyperlink Suppression</a></li>
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#support">Support</a></li>
+  </ul>
+
+</nav>
+
+<div class="section" id="buttons-vs-links">
+
+  <h2>Buttons vs. Links</h2>
+
+  <p>Hopefully by now, we all understand when we should be using <code>button</code> and <code>a</code> elements. The general consensus on what to use, and when, usually comes down to this conventional wisdom:</p>
+
+  <p><em>Buttons should be used for specific interface actions.</em></p>
+
+  <p>Typical use cases for using a <code>button</code> include:
+
+  <ul>
+    <li>Opening modal windows</li>
+    <li>Disclosure widget interactions (Accordions)</li>
+    <li>Closing interfaces, etc.</li>
+  </ul>
+
+  <p><em>Links on the other hand, should be used for navigation.</em></p>
+
+  <p>Use cases for hyperlinks include:</p>
+
+  <ul>
+    <li>Navigating to new pages and websites</li>
+    <li>Anchoring to same or new pages</li>
+  </ul>
+
+  <p>Sometimes knowing which to use can be a little tricky. For example, buttons that move content within a carousel (Note: Don't use carousels if you really do not have to. See <a href="http://shouldiuseacarousel.com/">Should I Use a Carousel?</a>), could be considered in-page navigation, but also a form of disclosure. However, when in doubt, my best advice is to use <code>button</code>. So far, this has worked out pretty well for me.</p>
+
+</div>
+
+<div class="section" id="understanding-roles">
+
+  <h2>Understanding Roles</h2>
+
+  <p>While it may not have great bearing on visual users, those who use assistive technology (AT) greatly benefit from the correct choices we make with our mark-up. All rendered HTML elements have an inherent <strong>role</strong> assigned to them.</p>
+
+  <p>You can see these roles in action in your favorite Browser Development Tools.</p>
+
+  <img src="/media/2020-02-buttons-links-scrolling-ui/roles.png" alt="Screenshot of the Accessibility inspector in Chrome DevTools. In it, we are highlighting the role of the target element.">
+
+  <p>These roles are often read back to AT users. For example, landing on a button labeled "Search Jobs", with the NVDA screen reader, will announce:</p>
+
+  <p>"Search Jobs, <strong><em>button</em></strong>..."</p>
+
+  <p>Understanding that this interaction point is a button, helps improve the <a href="https://www.24a11y.com/2019/pour-the-foundation-first/">perception</a> of the element and the <em>action to expect when element is interacted with</em>.</p>
+
+  <em>Buttons do things, while hyperlinks take us to destinations.</em></p>
+
+  <p>When we use links where buttons should be used (and vice versa), we break this perceivability.</p>
+
+  <p><a href="#toc">Table of Contents</a></p>
+
+</div>
+
+<div class="section" id="hyperlink-suppression">
+
+  <h2>Hyperlink Suppression</h2>
+
+  <p>While we are on the subject of hyperlinks, let's <em>jump back (pun intended)</em> to anchors for a moment.</p>
+
+  <p>We know that anchors can be destinations to sections within our websites. However, in an effort to be slick, we often suppress the native behavior of these links, using JavaScript, to smoothly scroll users to the desired point within the page. There are some issues with this technique that we should be mindful of:</p>
+
+  <ul>
+    <li>Keyboard focus is lost. Buy not applying focus to the area you are targeting, keyboard users are left behind and will have to continue tabbing from the original position.</li>
+    <li>Animating the scroll can be problematic for those with sensory disorders.</li>
+    <li>The hash in the URL is often removed (via <code>return false</code> in JavaScript). This creates a lost opportunity to share specific content on social media or with friends, family and colleagues.</li>
+  </ul>
+
+  <p><a href="#toc">Table of Contents</a></p>
+
+</div>
+
+<div class="section" id="solutions">
+
+  <h2>Solutions</h2>
+
+  <p>The best solution, and the one you should probably push for amongst stakeholders, is to simply allow anchors to work as they inherently do. Leave the fancy scrolls and risks that come with suppression, behind. This solves all three issues previously mentioned. However, I do live in the real world and understand that you may be required to implement a smooth scrolling behavior, so let's take a look at an uncommon approach. Again, while JavaScript is usually the de facto method for controlling scroll behavior, I think CSS offers a far more elegant solution:</p>
+
+<pre><code>html {
+scroll-behavior: smooth;
+}</code></pre>
+
+  <p>Using <code>scroll-behavior: smooth</code> not only allows us to include the obvious behavior for all anchors across our site, but also allows us to retain our URL hashes without the nasty jump. The focus issue is also solved, since the native behavior for anchors is to apply focus to their target elements. But what about sensory concerns?</p>
+
+<pre><code>@media (prefers-reduced-motion: reduce) {
+
+  html {
+  scroll-behavior: smooth;
+  }
+
+}</code></pre>
+
+  <p>By using the <code>prefers-reduced-motion</code> media query, we can honor a user's operating system settings to disallow animations. This may not be perfect for all use cases, like people with temporary disabilities, but it is a step in the right direction.</p>
+
+  <p><a href="#toc">Table of Contents</a></p>
+
+</div>
+
+<div class="section" id="example">
+
+  <h2>Example</h2>
+
+  <p>You can check out an example of this behavior on the <a href="#toc">this very page</a>! As an added bonus and to keep it all in the CSS family, using <code>scroll-behavior</code> and <code>prefers-reduced-motion</code> with the <code>:target</code> selector, helps us to create a very seamless, native and accessible user experience. <em>Look ma, no JavaScript!</em></p>
+
+</div>
+
+<div class="section" id="support">
+
+  <h2>Support</h2>
+
+  <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>, so it is an excellent example of progressive enhancement. However, if full support is what you need, then you'll have to find a polyfill or just roll the same behavior using JavaScript, which, as discussed, can be exceedingly more complex and prone to creating accessibility issues.</p>
+
+  <p>The <code>prefers-reduced-motion</code> media query also has <a href="https://caniuse.com/#search=prefers-reduced-motion">wide support</a>, so be sure to include it in any animation work you may produce.</p>
+
+  <p><a href="#toc">Table of Contents</a></p>
+
+</div>
