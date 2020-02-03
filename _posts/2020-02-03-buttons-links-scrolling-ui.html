@@ -9,29 +9,29 @@ tags: Accessibility Articles Web
 <style>
 
 .section, #toc {
-padding: 1em;
 border-radius: 10px;
 border: 1px transparent solid;
+padding: 0 1em;
 }
 
 .section:target, #toc:target {
-transition: all 300ms 1.2s ease-in-out;
 background-color: #eee;
 border: 1px #000 solid;
+transition: all 300ms 1.2s ease-in-out;
 }
 
 </style>
 
 <nav id="toc" aria-label="table of contents">
 
-  <ul>
+  <ol>
     <li><a href="#buttons-vs-links">Buttons vs. Links</a></li>
     <li><a href="#understanding-roles">Understanding Roles</a></li>
     <li><a href="#hyperlink-suppression">Hyperlink Suppression</a></li>
     <li><a href="#solutions">Solutions</a></li>
     <li><a href="#example">Example</a></li>
     <li><a href="#support">Support</a></li>
-  </ul>
+  </ol>
 
 </nav>
 
@@ -39,11 +39,11 @@ border: 1px #000 solid;
 
   <h2>Buttons vs. Links</h2>
 
-  <p>Hopefully by now, we all understand when we should be using <code>button</code> and <code>a</code> elements. The general consensus on what to use, and when, usually comes down to this conventional wisdom:</p>
+  <p>Hopefully by now, most of understand when we should be using <code>button</code> and <code>a</code> elements. If not, the general consensus on what to use, and when, usually comes down to this conventional wisdom:</p>
 
   <p><em>Buttons should be used for specific interface actions.</em></p>
 
-  <p>Typical use cases for using a <code>button</code> include:
+  <p>Typical use cases for implementing a <code>button</code> include:
 
   <ul>
     <li>Opening modal windows</li>
@@ -56,11 +56,11 @@ border: 1px #000 solid;
   <p>Use cases for hyperlinks include:</p>
 
   <ul>
-    <li>Navigating to new pages and websites</li>
-    <li>Anchoring to same or new pages</li>
+    <li>Navigating to other pages on your site or across the web</li>
+    <li>Anchoring to same or other pages</li>
   </ul>
 
-  <p>Sometimes knowing which to use can be a little tricky. For example, buttons that move content within a carousel (Note: Don't use carousels if you really do not have to. See <a href="http://shouldiuseacarousel.com/">Should I Use a Carousel?</a>), could be considered in-page navigation, but also a form of disclosure. However, when in doubt, my best advice is to use <code>button</code>. So far, this has worked out pretty well for me.</p>
+  <p>Sometimes knowing which to use can be a little tricky. For example, buttons that move content within a carousel (<a href="http://shouldiuseacarousel.com/">Please don't use carousels if you don't need them.</a>), could be considered in-page navigation, but also a form of disclosure. However, when in doubt, my best advice is to use <code>button</code>. So far, this has worked out pretty well for me.</p>
 
 </div>
 
@@ -74,13 +74,13 @@ border: 1px #000 solid;
 
   <img src="/media/2020-02-buttons-links-scrolling-ui/roles.png" alt="Screenshot of the Accessibility inspector in Chrome DevTools. In it, we are highlighting the role of the target element.">
 
-  <p>These roles are often read back to AT users. For example, landing on a button labeled "Search Jobs", with the NVDA screen reader, will announce:</p>
+  <p>These roles are often read back to AT users. For example, landing on a button labeled "Search Jobs" with the NVDA screen reader, will announce:</p>
 
   <p>"Search Jobs, <strong><em>button</em></strong>..."</p>
 
-  <p>Understanding that this interaction point is a button, helps improve the <a href="https://www.24a11y.com/2019/pour-the-foundation-first/">perception</a> of the element and the <em>action to expect when element is interacted with</em>.</p>
+  <p>Understanding that this interaction point is a button, helps improve the <a href="https://www.24a11y.com/2019/pour-the-foundation-first/">perception</a> of the element and the <em>action to expect when element an is interacted with</em>.</p>
 
-  <em>Buttons do things, while hyperlinks take us to destinations.</em></p>
+  <em>Buttons do things, while hyperlinks navigate us.</em></p>
 
   <p>When we use links where buttons should be used (and vice versa), we break this perceivability.</p>
 
@@ -94,13 +94,13 @@ border: 1px #000 solid;
 
   <p>While we are on the subject of hyperlinks, let's <em>jump back (pun intended)</em> to anchors for a moment.</p>
 
-  <p>We know that anchors can be destinations to sections within our websites. However, in an effort to be slick, we often suppress the native behavior of these links, using JavaScript, to smoothly scroll users to the desired point within the page. There are some issues with this technique that we should be mindful of:</p>
+  <p>We know that anchors can be destinations to sections within our websites. However, in an effort to be slick, we often suppress the native behavior of these links, using JavaScript, to smoothly scroll users to the desired position within a page. There are some issues with this technique that we should be mindful of:</p>
 
-  <ul>
-    <li>Keyboard focus is lost. Buy not applying focus to the area you are targeting, keyboard users are left behind and will have to continue tabbing from the original position.</li>
+  <ol>
+    <li>Keyboard focus is lost. By not applying focus to the area you are targeting, keyboard users are left behind and will have to continue tabbing from the original position.</li>
     <li>Animating the scroll can be problematic for those with sensory disorders.</li>
     <li>The hash in the URL is often removed (via <code>return false</code> in JavaScript). This creates a lost opportunity to share specific content on social media or with friends, family and colleagues.</li>
-  </ul>
+  </ol>
 
   <p><a href="#toc">Table of Contents</a></p>
 
@@ -136,7 +136,7 @@ scroll-behavior: smooth;
 
   <h2>Example</h2>
 
-  <p>You can check out an example of this behavior on the <a href="#toc">this very page</a>! As an added bonus and to keep it all in the CSS family, using <code>scroll-behavior</code> and <code>prefers-reduced-motion</code> with the <code>:target</code> selector, helps us to create a very seamless, native and accessible user experience. <em>Look ma, no JavaScript!</em></p>
+  <p>You can check out an example of this behavior on <a href="#toc">this very page</a>! As an added bonus and to keep it all in the CSS family, using <code>scroll-behavior</code> and <code>prefers-reduced-motion</code> with the <code>:target</code> selector, helps us to create a very seamless, native and accessible user experience. <em>Look ma, no JavaScript!</em></p>
 
 </div>
 
@@ -144,7 +144,7 @@ scroll-behavior: smooth;
 
   <h2>Support</h2>
 
-  <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>. I personally see no harm in using it and to allow the anchors to fallback to their default behavior. Progressive enhancement FTW! However, if full support is what you need, then you'll have to find a polyfill or just roll the same behavior using JavaScript, which, as discussed, can be exceedingly more complex and prone to creating accessibility issues.</p>
+  <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>. I personally see no harm in using it and to allow the anchors to fallback to their default behavior if CSS support is not present in an older browser. Progressive enhancement at its best. However, if full support is what you require, then you'll have to find a polyfill or just roll the same behavior using JavaScript, but <strong>please</strong> do not forget to include support for all the issues mentioned here.</p>
 
   <p>The <code>prefers-reduced-motion</code> media query also has <a href="https://caniuse.com/#search=prefers-reduced-motion">wide support</a>, so be sure to include it in any animation work you may produce.</p>
 
