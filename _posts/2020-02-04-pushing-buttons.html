@@ -1,8 +1,8 @@
 ---
 layout: micropubpost
 description: "Some musings on links vs. buttons as well as some thoughts on scrolling user interfaces."
-title: "On Buttons, Links and Scrolling User Interfaces"
-date: "2020-02-03 11:11:34"
+title: "Pushing Buttons"
+date: "2020-02-04 09:45:32"
 tags: Accessibility Articles Web Notes
 ---
 
@@ -22,6 +22,7 @@ border: 1px #000 solid;
 .section:target, #toc:target {
 background-color: #eee;
 border: 1px #000 solid;
+color: #000;
 transition: all 300ms 1.2s ease-in-out;
 }
 
@@ -32,6 +33,7 @@ transition: all 300ms 1.2s ease-in-out;
   <ol>
     <li><a href="#buttons-vs-links">Buttons vs. Links</a></li>
     <li><a href="#understanding-roles">Understanding Roles</a></li>
+    <li><a href="#keyboard-benefits">Keyboard Benefits</a></li>
     <li><a href="#hyperlink-suppression">Hyperlink Suppression</a></li>
     <li><a href="#solutions">Solutions</a></li>
     <li><a href="#example">Example</a></li>
@@ -62,7 +64,7 @@ transition: all 300ms 1.2s ease-in-out;
 
   <ul>
     <li>Navigating to other pages on your site or across the web</li>
-    <li>Anchoring to same or other pages</li>
+    <li>Anchoring to content fragments on your site or across the web</li>
   </ul>
 
   <p>Sometimes knowing which to use can be a little tricky. For example, buttons that move content within a carousel (<a href="http://shouldiuseacarousel.com/">Please don't use carousels if you don't need them.</a>), could be considered in-page navigation, but also a form of disclosure. However, when in doubt, my best advice is to use <code>button</code>. So far, this has worked out pretty well for me.</p>
@@ -75,19 +77,29 @@ transition: all 300ms 1.2s ease-in-out;
 
   <p>While it may not have great bearing on visual users, those who use assistive technology (AT) greatly benefit from the correct choices we make with our mark-up. All rendered HTML elements have an inherent <strong>role</strong> assigned to them.</p>
 
-  <p>You can see these roles in action in your favorite Browser Development Tools.</p>
+  <p>You can access these roles with your favorite browser development tool.</p>
 
-  <img src="/media/2020-02-buttons-links-scrolling-ui/roles.png" alt="Screenshot of the Accessibility inspector in Chrome DevTools. In it, we are highlighting the role of the target element.">
+  <img src="/media/2020-02-pushing-buttons/roles.png" alt="Screenshot of the Accessibility inspector in Chrome DevTools. In it, we are highlighting the role of the target element.">
 
   <p>These roles are often read back to AT users. For example, landing on a button labeled "Search Jobs" with the NVDA screen reader, will announce:</p>
 
   <p>"Search Jobs, <strong><em>button</em></strong>..."</p>
 
-  <p>Understanding that this interaction point is a button, helps improve the <a href="https://www.24a11y.com/2019/pour-the-foundation-first/">perception</a> of the element and the <em>action to expect when an element is interacted with</em>.</p>
+  <p>Understanding that this interaction point is a button, helps improve the <em>perception</em> of the element and the <em>action to expect when an element is interacted with</em>. Now seems as good a time to suggest getting better acquainted with a WCAG concept known as <a href="https://www.24a11y.com/2019/pour-the-foundation-first/">POUR (Perceivable, Operable, Understandable, and Robust)</a>, so read up!</p>
 
-  <em>Buttons do things, while hyperlinks navigate.</em></p>
+  <em>Buttons do things; hyperlinks navigate.</em></p>
 
-  <p>When we use links where buttons should be used (and vice versa), we break this perceivability.</p>
+  <p>When we use links where buttons should be used (and vice versa), we break this expectation.</p>
+
+  <p><a href="#toc">Table of Contents</a></p>
+
+</div>
+
+<div class="section" id="keyboard-benefits">
+
+  <h2>Keyboard Benefits</h2>
+
+  <p>Using the right element for the job has other benefits, too. For example, keyboard users will expect both the return and space keys to initiate an action. When you use the <code>button</code> element, there will be no need to code a second event for <code>keypress</code>, as the single <code>click</code> event will work with both of these keys. <em>Efficient!</em></p>
 
   <p><a href="#toc">Table of Contents</a></p>
 
@@ -102,7 +114,7 @@ transition: all 300ms 1.2s ease-in-out;
   <p>We know that anchors can be destinations to sections within our websites. However, in an effort to be slick, we often suppress the native behavior of these links, using JavaScript, to smoothly scroll users to the desired position within a page. There are some issues with this technique that we should be mindful of:</p>
 
   <ol>
-    <li>Keyboard focus is lost. By not applying focus to the area you are targeting, keyboard users are left behind and will have to continue tabbing from the original position.</li>
+    <li>Keyboard focus is lost. By not applying focus to the area you are targeting, keyboard users are left behind and will have to continue tabbing from the original, pressed position.</li>
     <li>Animating the scroll can be problematic for those with sensory disorders.</li>
     <li>The hash in the URL is often removed (via <code>return false</code> in JavaScript). This creates a lost opportunity to share specific content on social media or with friends, family and colleagues.</li>
   </ol>
@@ -143,13 +155,15 @@ scroll-behavior: smooth;
 
   <p>You can check out an example of this behavior on <a href="#toc">this very page</a>! As an added bonus and to keep it all in the CSS family, using <code>scroll-behavior</code> and <code>prefers-reduced-motion</code> with the <code>:target</code> selector, helps us to create a very seamless, native and accessible user experience. <em>Look ma, no JavaScript!</em></p>
 
+  <p><a href="#toc">Table of Contents</a></p>
+
 </div>
 
 <div class="section" id="support">
 
   <h2>Support</h2>
 
-  <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>. I personally see no harm in using it and to allow the anchors to fallback to their default behavior if CSS support is not present in an older browser. Progressive enhancement at its best. However, if full support is what you require, then you'll have to find a polyfill or just roll the same behavior using JavaScript, but <strong>please</strong> do not forget to include support for all the issues mentioned here.</p>
+  <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>. I personally see no harm in using it and to allow the anchors to fall back to their default behavior if CSS support is not present in an older browser. Progressive enhancement at its best. However, if full support is what you require, then you'll have to find a polyfill or just roll the same behavior using JavaScript, but <strong>please</strong> do not forget to include support for all the issues mentioned here.</p>
 
   <p>The <code>prefers-reduced-motion</code> media query also enjoys <a href="https://caniuse.com/#search=prefers-reduced-motion">wide support</a>, so be sure to include it in any animation work you may produce.</p>
 
