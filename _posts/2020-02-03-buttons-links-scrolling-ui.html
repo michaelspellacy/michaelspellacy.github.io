@@ -3,7 +3,7 @@ layout: micropubpost
 description: "Some musings on links vs. buttons as well as some thoughts on scrolling user interfaces."
 title: "On Buttons, Links and Scrolling User Interfaces"
 date: "2020-02-03 11:11:34"
-tags: Accessibility Articles Web
+tags: Accessibility Articles Web Notes
 ---
 
 <style>
@@ -12,6 +12,11 @@ tags: Accessibility Articles Web
 border-radius: 10px;
 border: 1px transparent solid;
 padding: 0 1em;
+}
+
+.section img {
+border-radius:10px;
+border: 1px #000 solid;
 }
 
 .section:target, #toc:target {
@@ -146,7 +151,7 @@ scroll-behavior: smooth;
 
   <p>Support for <code>scroll-behavior</code> is <a href="https://caniuse.com/#feat=css-scroll-behavior">very good across the board</a>. I personally see no harm in using it and to allow the anchors to fallback to their default behavior if CSS support is not present in an older browser. Progressive enhancement at its best. However, if full support is what you require, then you'll have to find a polyfill or just roll the same behavior using JavaScript, but <strong>please</strong> do not forget to include support for all the issues mentioned here.</p>
 
-  <p>The <code>prefers-reduced-motion</code> media query also has <a href="https://caniuse.com/#search=prefers-reduced-motion">wide support</a>, so be sure to include it in any animation work you may produce.</p>
+  <p>The <code>prefers-reduced-motion</code> media query also enjoys <a href="https://caniuse.com/#search=prefers-reduced-motion">wide support</a>, so be sure to include it in any animation work you may produce.</p>
 
   <p><a href="#toc">Table of Contents</a></p>
 
