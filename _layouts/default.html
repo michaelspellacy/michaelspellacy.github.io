@@ -27,11 +27,11 @@
 	<link href="{{ page.url | replace: 'index.html','' | prepend: site.url}}" rel="canonical">{% endif %}
 	<link href="{{ site.author-image | replace: '.jpg', '.ico'}}?s=32" rel="icon">
 	<link href="/rss.xml" rel="alternate" title="{{ site.author }} - RSS Feed" type="application/rss+xml">
-	<link crossorigin="anonymous" href="https://indieauth.com/auth" rel="authorization_endpoint">
-	<link crossorigin="anonymous" href="https://tokens.indieauth.com/token" rel="token_endpoint">
-	<link crossorigin="anonymous" href="https://michaelspellacy-com.herokuapp.com/micropub/main" rel="micropub">
-	<link crossorigin="anonymous" href="https://aperture.p3k.io/microsub/367" rel="microsub">
-	<link crossorigin="anonymous" href="https://webmention.herokuapp.com/api/webmention" rel="webmention">{% if page.metatitle %}
+	<link href="https://indieauth.com/auth" rel="authorization_endpoint">
+	<link href="https://tokens.indieauth.com/token" rel="token_endpoint">
+	<link href="https://michaelspellacy-com.herokuapp.com/micropub/main" rel="micropub">
+	<link href="https://aperture.p3k.io/microsub/367" rel="microsub">
+	<link href="https://webmention.herokuapp.com/api/webmention" rel="webmention">{% if page.metatitle %}
 	<title>{{ page.metatitle }} - {{ site.name }}</title>{% else %}
 	<title>{{ page.title }}{% if page.title != "" %} - {% endif %}{{ site.name }}</title>{% endif %}
 </head>
@@ -148,7 +148,20 @@
 
 			</form>
 
+			<script id="webmention-hosted">
 
+			(function () {
+
+				var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
+				url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
+				url = url && url[0] ? url[0].href : false;
+				sn.async = true;
+				sn.src = "https://webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
+				s.parentNode.insertBefore(sn, s);
+
+			}());
+
+			</script>
 
 			{% else %}
 
@@ -196,22 +209,6 @@
 
 	<script src="/js/global.js"></script>{% if page.localjs %}
 	<script src="{{ page.localjs }}"></script>{% endif %}
-
-	<script id="webmention-hosted">
-
-	(function () {
-
-		var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
-		url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
-		url = url && url[0] ? url[0].href : false;
-		sn.crossorigin = "anonymous";
-		sn.async = true;
-		sn.src = "https://webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
-		s.parentNode.insertBefore(sn, s);
-
-	}());
-
-	</script>
 
 </body>
 </html>
