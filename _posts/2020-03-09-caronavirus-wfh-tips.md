@@ -1,13 +1,13 @@
 ---
 layout: micropubpost
-date: '2020-03-09T13:10:00.000Z'
+date: '2020-03-09T01:38:00.000Z'
 title: Caronavirus: Work From Home Tips For Office Workers
 tags: Notes
 mf-post-status:
   - published
 slug: caronavirus-wfh-tips
 ---
-With the caronavirus upon us and not leaving your home possibly about to become in vogue, I thought that I might share a few tips that I employ to successfully work from home. 
+With the caronavirus upon us and not leaving your home possibly about to become in vogue, I thought that I might share a few tips that I employ to successfully work from home.
 
 ##Keep To Routine
 
