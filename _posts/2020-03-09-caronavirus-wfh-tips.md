@@ -1,7 +1,7 @@
 ---
 layout: micropubpost
-date: '2020-03-09T01:38:00.000Z'
-title: Caronavirus: Work From Home Tips For Office Workers
+date: '2020-03-09T17:23:00.000Z'
+title: 'Caronavirus: Work From Home Tips For Office Workers'
 tags: Notes
 mf-post-status:
   - published
