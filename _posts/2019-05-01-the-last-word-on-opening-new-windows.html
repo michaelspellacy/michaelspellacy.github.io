@@ -6,11 +6,15 @@ date: "2019-05-01 11:11:34"
 tags: Accessibility Articles Web
 ---
 
-<p>From time to time, the question surrounding the opening of new windows (tabs) to external sites...pops up. (Sorry.) I thought I would share a few thoughts as to why we may want to think real hard before implementing this functionality. It is a touchy matter for some and has been discussed, <em>ad nauseam</em>, for years, so I might be sweeping a dirt floor here, but this is certainly how I, and many others in the UX and UI profession, have come to see and respond to the request over the last decade. Also, why repeat myself to friends and colleagues when I can just share this article when fresh controversy over this subject erupts again? I think it is a smart idea to be efficient with our time.</p>
+<p>From time to time, the question surrounding the opening of new windows (tabs) to external sites...pops up. (Sorry.) I thought I would share a few thoughts as to why we may want to think real hard before implementing this functionality. It is a touchy matter for some and has been discussed, <em>ad nauseam</em>, for years, so I might be sweeping a dirt floor here, but this is certainly how I, and many others in the UX and UI profession, have come to see and respond to the request over the last decade. Also, why repeat myself to friends and colleagues when I can just share this article when fresh controversy over this subject erupts again? I like to be efficient with my time.</p>
 
 <h2>History Lesson</h2>
 
-<p>Let me tell you a little story. Back in the early days of the web, around the mid to late 90’s, we did a lot of <em>unusual</em> things in an effort to keep users on our sites. If websites were ever narcissistic and creepy, this was their heyday. <em>Hi, where ya going? Stick around and we’ll have some fun. Check out my Flash! Click on me. Don’t leave...please.</em> I think this sums up the experience back then pretty well, don't you? Overall, there was this rampant and irrational fear that if a user left your site, that they would never return. Let's be honest here. With a website going to such great lengths to keep us from leaving<em>&mdash;who'd want to stay?</em></p>
+<p>Let me tell you a little story. Back in the early days of the web, around the mid to late 90’s, we did a lot of <em>unusual</em> things in an effort to keep users on our sites. If websites were ever narcissistic and creepy, this was their heyday.</p>
+
+<p><em>Hi, where ya going? Check out my Flash! Click on me. Don’t leave...please.</em></p>
+
+<p>I think this sums up the experience back then pretty well, don't you? Overall, there was this rampant and irrational fear that if a user left your site, that they would never return. Let's be honest here. With a website going to such lengths to keep us from leaving<em>&mdash;who'd want to stay?</em></p>
 
 <figure>
 
@@ -22,9 +26,9 @@ tags: Accessibility Articles Web
 
 <p>In later years, this effort was also combined with a misguided attempt to improve one’s SEO (Search Engine Optimization), so it was very commonplace to have every link that left your site, open in a new window. SEO specialists didn't like the idea of a user leaving a site because it supposedly hurt the "time on page" and bounce rate statistics. However, if a user is not on your site, then they are not on your site. Keeping the window open in the background is not an accurate (or honest) portrayal of usage. Now, combine all of this with hostile attempts to push ads into our faces by hijacking the user experience with popup windows and you have a recipe for a UX disaster, which it was. Suffice to say, this incident has left a long standing bad taste in our collective mouths.</p>
 
-<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to hold them hostage. <em>Say what?</em> Yes! Because we trust our users and have done our jobs to craft an experience that they will want or need to return to, no hacks or anti-patterns are required! It is often a smart idea to not make assumptions about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action for them. Your users are intelligent and should be treated that way! 'Nuff said.</p>
+<p>Unfortunately, old habits die hard and many of these outdated notions still prevail, but we know better than to employ such seedy techniques today. (I hope.) On the SEO front, good quality content, proper keyword placement and link building strategies rule the day. We also trust that users will return to our sites without having to hold them hostage. <em>Say what?</em> Yes! Because we <em>trust our users</em> and trust that we have done our jobs to craft an experience that they will want or need to return to, no hacks or anti-patterns required! It is often best not to make assumptions about certain behaviors and <em>let the user decide</em> if opening a new window is the best course of action for them. Your users are intelligent and should be treated that way! 'Nuff said.</p>
 
-<p>Personally, I always ask myself a simple question: Do I need a new window? 99% of the time the answer is no, but some functionality may demand it. I <em>never</em> open a new window because I don't want users to leave my site. That's just silly!</p>
+<p>Personally, I always ask myself a simple question: Do I need a new window? 99% of the time the answer is no, but some functionality may demand it. I <em>never</em> open a new window because I don't want users to leave my site.</p>
 
 <p>If you would like to read another opinion on the subject, by a more reputable and well-known web design heavy-weight, then please check out <a href="https://css-tricks.com/use-target_blank/">When to use target="_blank"</a> by Chris Coyier. I am even linking to this article without opening it in a new window. <em>Meta!</em></p>
 
@@ -32,7 +36,15 @@ tags: Accessibility Articles Web
 
 <h2>Accessibility</h2>
 
-<p>Opening up new windows can often be a poor experience for those among us who are disabled. Especially those with cognitive disabilities, who may find the creation of a new window, spawned without warning, to be disorienting. In addition to this, new windows also break the back button, which a lot of users, disabled or not, find very useful. If you must open a new window, then you had better do right by accessibility! Here is one way to handle it:</p>
+<p>Opening up new windows can often be a poor experience for those among us who are disabled. Especially those with cognitive disabilities, who may find the creation of a new window, spawned without warning, to be disorienting. From <a href="https://www.w3.org/TR/WCAG20-TECHS/G201.html">WCAG</a>:
+
+<blockquote cite="https://www.w3.org/TR/WCAG20-TECHS/G201.html">
+
+  <p>"Opening new windows automatically when a link is activated can be disorienting for people who have difficulty perceiving visual content, and for some people with cognitive disabilities, if they are not warned in advance."</p>
+
+</blockquote>
+
+<p>In addition to this, new windows also break the back button, which a lot of users, disabled or not, find very useful. If you must open a new window, then you had better do right by accessibility and UX! Here is one way to handle it:</p>
 
 <pre><code>... &lt;a href="..." target="_blank" <strong>aria-label="my link text (opens in new window)"</strong>&gt;my link text&lt;a&gt; ...</code></pre>
 
