@@ -4,6 +4,8 @@ pkg/
 *.swp
 *~
 _httpdocs/
+_site/
+node_modules/
 .bundle/
 .DS_Store
 .ruby-version
