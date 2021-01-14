@@ -109,21 +109,39 @@ tags: Accessibility Articles Web Notes
 
   <p>The best solution, and the one you should probably push for amongst stakeholders, is to simply allow anchors to work as they inherently do. Leave the fancy scrolls and risks that come with suppression, behind. This solves all three issues previously mentioned. However, I do live in the real world and understand that you may be required to implement a smooth scrolling behavior, so let's take a look at an uncommon approach. Again, while JavaScript is usually the de facto method for controlling scroll behavior, I think CSS offers a far more elegant solution:</p>
 
-<pre><code>html {
+<pre><code>html:focus-within {
 scroll-behavior: smooth;
 }</code></pre>
 
   <p>Using <code>scroll-behavior: smooth</code> not only allows us to include the obvious behavior for all anchors across our site, but also allows us to retain our URL hashes without the nasty jump. The focus issue is also solved, since the native behavior for anchors is to apply focus to their target elements. But what about sensory concerns?</p>
 
-<pre><code>@media (prefers-reduced-motion: reduce) {
+<pre><code>@media (prefers-reduced-motion: no-preference) {
 
-  html {
-  scroll-behavior: auto;
+  html:focus-within {
+  scroll-behavior: smooth;
+  }
+
+}</code></pre>
+
+  <p>For you Sass lovers in the audience:</p>
+
+<pre><code>html {
+
+  &:focus-within {
+
+    @media (prefers-reduced-motion: no-preference) {
+
+      scroll-behavior: smooth;
+
+    }
+
   }
 
 }</code></pre>
 
   <p>By using the <code>prefers-reduced-motion</code> media query, we can honor a user's operating system settings to disallow animations. This may not be perfect for all use cases, like people with temporary disabilities (migraines, etc.), but it is a step in the right direction.</p>
+
+  <p><strong>Update:</strong> The use of the <code>:focus-within</code> pseudo-class allows us to only fire scrolling from within the page we are engaging with. Introducing a scroll when a user does an in-page search or when they land on a new page, can be a usability issue. <a href="https://css-tricks.com/fixing-smooth-scrolling-with-find-on-page/">Can you read more about it on CSS-Tricks.</a></p>
 
   <p><a href="#toc">Table of Contents</a></p>
 
