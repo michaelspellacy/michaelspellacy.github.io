@@ -127,21 +127,15 @@ scroll-behavior: smooth;
 
 <pre><code>html {
 
-  &:focus-within {
+  @media (prefers-reduced-motion: no-preference) {
 
-    @media (prefers-reduced-motion: no-preference) {
-
-      scroll-behavior: smooth;
-
-    }
+    scroll-behavior: smooth;
 
   }
 
 }</code></pre>
 
   <p>By using the <code>prefers-reduced-motion</code> media query, we can honor a user's operating system settings to disallow animations. This may not be perfect for all use cases, like people with temporary disabilities (migraines, etc.), but it is a step in the right direction.</p>
-
-  <p><strong>Update:</strong> The use of the <code>:focus-within</code> pseudo-class allows us to only fire scrolling from within the page we are engaging with. Introducing a scroll when a user does an in-page search or when they land on a new page, can be a usability issue. <a href="https://css-tricks.com/fixing-smooth-scrolling-with-find-on-page/">Can you read more about it on CSS-Tricks.</a></p>
 
   <p><a href="#toc">Table of Contents</a></p>
 

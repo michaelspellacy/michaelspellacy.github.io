@@ -6,13 +6,11 @@
 
 html {
 box-sizing: border-box;
-scroll-behavior: smooth;
-}
 
-@media (prefers-reduced-motion: reduce) {
+  @media (prefers-reduced-motion: no-preference) {
 
-  html {
-  scroll-behavior: auto;
+    scroll-behavior: smooth;
+
   }
 
 }
@@ -21,8 +19,15 @@ scroll-behavior: smooth;
 box-sizing: inherit;
 }
 
+*:focus {
+box-shadow: 0 0 0 3px currentColor;
+outline: none;
+}
+
 a {
 color: #4a2376;
+border-radius: 3px;
+padding: 5px;
 
 	@media (prefers-color-scheme: dark) {
 
