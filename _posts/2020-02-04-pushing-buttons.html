@@ -109,7 +109,7 @@ tags: Accessibility Articles Web Notes
 
   <p>The best solution, and the one you should probably push for amongst stakeholders, is to simply allow anchors to work as they inherently do. Leave the fancy scrolls and risks that come with suppression, behind. This solves all three issues previously mentioned. However, I do live in the real world and understand that you may be required to implement a smooth scrolling behavior, so let's take a look at an uncommon approach. Again, while JavaScript is usually the de facto method for controlling scroll behavior, I think CSS offers a far more elegant solution:</p>
 
-<pre><code>html:focus-within {
+<pre><code>html {
 scroll-behavior: smooth;
 }</code></pre>
 
@@ -117,7 +117,7 @@ scroll-behavior: smooth;
 
 <pre><code>@media (prefers-reduced-motion: no-preference) {
 
-  html:focus-within {
+  html {
   scroll-behavior: smooth;
   }
 
