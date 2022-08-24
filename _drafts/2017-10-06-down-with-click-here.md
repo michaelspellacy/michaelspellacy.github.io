@@ -20,7 +20,7 @@ Link relevant terms . So obvious, right? You can even link full sentences if tha
 
 ## Solution 2
 
-If you can’t link unique terms, then <abbr title="Accessible Rich Internet Applications">ARIA</abbr> has you covered here (H/T to <a href="https://twitter.com/karlgroves">Karl Groves</a> for this little gem of a technique):
+If you can’t link unique terms, then <abbr>ARIA</abbr> (Accessible Rich Internet Applications) has you covered here (H/T to <a href="https://twitter.com/karlgroves">Karl Groves</a> for this little gem of a technique):
 
 <pre><code>&lt;h2 id="foo"&gt;Foo heading&lt;/h2&gt;
 

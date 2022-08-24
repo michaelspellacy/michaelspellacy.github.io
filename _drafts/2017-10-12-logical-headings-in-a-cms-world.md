@@ -52,4 +52,4 @@ What we can do here is use <code>&lt;h2&gt;</code> as our go-to heading in most 
 
 &lt;h3&gt;…&lt;/h3&gt;</code></pre>
 
-It is not lost on this author that I too am making assumptions here, but when you are dealing with the unexpected in a CMS, I find it is better to err on the side of caution and use <code>&lt;h2&gt;</code> as your default, rather than risk breaking the logical heading order, which seems much worse. So, H2 <abbr title="For The Win">FTW</abbr>!
+It is not lost on this author that I too am making assumptions here, but when you are dealing with the unexpected in a CMS, I find it is better to err on the side of caution and use <code>&lt;h2&gt;</code> as your default, rather than risk breaking the logical heading order, which seems much worse. So, H2 <abbr>FTW</abbr> (For The Win)!

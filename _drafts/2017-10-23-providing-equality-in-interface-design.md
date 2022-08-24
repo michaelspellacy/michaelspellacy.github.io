@@ -18,7 +18,7 @@ While most visual users will understand the action to take here, many disabled u
 
 <pre><code>&lt;button class="btn-menu"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
 
-In the past, we might have added text and accessibly hidden it via CSS, but <abbr title="Accessible Rich Internet Applications">ARIA</abbr> also has our back here and is a more modern solution to including disernable text. By adding `aria-label="Menu"` to our `button`, we have now created an equal experience. Sometimes a little ARIA can go a long way!
+In the past, we might have added text and accessibly hidden it via CSS, but <abbr>ARIA</abbr> (Accessible Rich Internet Applications) also has our back here and is a more modern solution to including discernable text. By adding `aria-label="Menu"` to our `button`, we have now created an equal experience. Sometimes a little ARIA can go a long way!
 
 <pre><code>&lt;button aria-label="Menu" class="btn-menu"&gt;&lt;span&gt;&lt;/span&gt;&lt;/button&gt;</code></pre>
 

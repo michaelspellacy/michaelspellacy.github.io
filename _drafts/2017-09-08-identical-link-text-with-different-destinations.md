@@ -24,7 +24,7 @@ This text is accessibly hidden with CSS and will only be read to assistive techn
 
 ## Solution 2
 
-Alternatively, you could use <abbr title="Accessible Rich Internet Applications">ARIA</abbr> to assist you here. ARIA is meant to solve problems like these and is the **preferred** solution to this issue nowadays. Here we are making good use of the `aria-label` attribute.
+Alternatively, you could use <abbr>ARIA</abbr> (Accessible Rich Internet Applications) to assist you here. ARIA is meant to solve problems like these and is the **preferred** solution to this issue nowadays. Here we are making good use of the `aria-label` attribute.
 
 <pre><code>&lt;a href="/category/technology-jobs/86/75309/1" aria-label=”View Front-end Developer Jobs”&gt;View Jobs&lt;/a&gt;</code></pre>
 
