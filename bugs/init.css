@@ -1,0 +1,27 @@
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-size: 100%;
+line-height: 2;
+padding: 1em 2em;
+}
+
+dt {
+font-weight: bold;
+}
+
+code, kbd {
+display: inline-block;
+font: inherit;
+margin: .1em 0;
+padding: .3em .5em;
+line-height: normal;
+}
+
+code {
+background-color: #000;
+color: #fff;
+}
+
+kbd {
+background-color: #CCC;
+}

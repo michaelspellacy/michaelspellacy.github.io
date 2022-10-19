@@ -1,6 +1,6 @@
 ---
-description: Spell is a web developer, designer and accessibility specialist living in beautiful Allentown, PA. In his spare time, he can be found restoring retro arcade machines.
-metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessibility specialist
+description: Spell is a web developer, designer and digital accessibility specialist living in beautiful Allentown, PA. In his spare time, he can be found restoring retro arcade machines.
+metatitle: Michael Spellacy (Spell) - Web developer and accessibility specialist
 ---
 
 <h1>Michael "Spell" Spellacy <span>Front-end developer, designer and accessibility specialist in  Allentown, PA</span></h1>
@@ -9,7 +9,17 @@ metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessib
 
   {% for post in site.posts %}
 
-  {% if post.tags contains "Notes" %}
+  {% if post.category contains "social" or post.category contains "links" or post.tags contains "Articles" %}
+
+  {% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+
+  {% capture nday %}{{ post.next.date | date: '%m%d%Y' }}{% endcapture %}
+
+  {% if day != nday %}
+
+      <h2>{{ post.date | date: "%A, %B %e, %Y" }}</h2>
+
+  {% endif %}
 
   <article class="h-entry h-post">
 
@@ -49,6 +59,8 @@ metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessib
 
 </div>
 
+<!--
+
 {% for category in site.tags %}
 
 <h2>{{ category[0] }}</h2>
@@ -70,3 +82,5 @@ metatitle: Michael Spellacy (Spell) - Front-end developer, designer and accessib
 </ul>
 
 {% endfor %}
+
+-->

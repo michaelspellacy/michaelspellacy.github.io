@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <meta content="summary_large_image" name="twitter:card">
+	  <meta content="@Spellacy" name="twitter:creator">
+	  <meta content="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=600" name="twitter:image">
+	  <meta content="The author wearing his toy space helmet." name="twitter:image:alt">
+	  <meta content="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=600" property="og:image">
+	  <meta content="The author wearing his toy space helmet." property="og:image:alt">
+    <link href="init.css" rel="stylesheet">
+    <title>Keyboard Event Not Firing On Elements Containing ::before Pseudo-element When NVDA Running - Michael Spellacy: Bugs</title>
+
+    <style>
+
+    .button {
+    display: block;
+    margin: 1em 0 0;
+    }
+
+    .after::after {
+    content: "(Pseudo Text)";
+    display: inline-block;
+    }
+
+    .before::before {
+    content: "(Pseudo Text)";
+    display: inline-block;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+  <header id="banner">
+
+			<a href="https://michaelspellacy.com">
+
+				<img alt="Michael Spellacy: Bugs" height="100" src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=200" width="100">
+
+			</a>
+
+	</header>
+
+  <main>
+
+    <h1>Keyboard Event Not Firing On Elements Containing ::before Pseudo-element When NVDA Running</h1>
+
+    <dl>
+      <dt>Issue:</dt>
+      <dd>When NVDA (Non-Visual Desktop Access) is running, keyboard events do not appear to fire on interactive elements that include a <code>::before</code> pseudo-element that may contain text content, emoticons, or CSS counters and that also include a display property, like <code>display: block;</code>. An event will fire on pointer click, but not when the <kbd>Enter</kbd> key is clicked. On the <code>button</code> element, the <kbd>Space</kbd> key should also fire an event, but does not. When either the display or content properties are removed, the event will then fire as it should. A null content property, like <code>content: ""</code>, used with a display property, does not appear to trigger the issue. The <code>::after</code> pseudo-element is also uneffected here.</dd>
+      <dt>Platform(s):</dt>
+      <dd><b>Chrome:</b> Version 106.0.5249.119 (Official Build) (64-bit)</dd>
+      <dd><b>Edge:</b> Version 106.0.1370.47 (Official build) (64-bit)</dd>
+      <dd><b>NVDA:</b> 2022.3.1</dd>
+    <dl>
+
+    <h2>Steps to Duplicate Issue</h2>
+
+    <ol>
+      <li><a href=https://www.nvaccess.org/download/>Install</a> and open NVDA</li>
+      <li>On this page:
+
+        <ul>
+          <li>Open DevTools and access "Console"</li>
+          <li>Tab through page and click on each interactive element below</li>
+          <li>The function should write the word "Success" to the console on every click, which is not happening on elements that contain a <code>::before</code>. The event works as it should when elements that contain an <code>::after</code> pseudo-element are clicked.</li>
+        </ul>
+
+      </li>
+    </ol>
+
+    <h2>Interactive Elements with ::before</h2>
+
+    <a class="button before" href="#"> Hyperlink</a>
+
+    <button class="button before"> Button</button>
+
+    <h2>Interactive Elements with ::after</h2>
+
+    <a class="button after" href="#">Hyperlink </a>
+
+    <button class="button after">Button </button>
+
+  </main>
+
+<footer>
+
+  <h3>Contact Me</h3>
+
+  <ul>
+  	<li><a href="mailto:spell@spellacy.net">Email</a></li>
+  	<li><a href="https://github.com/michaelspellacy/">Github</a></li>
+  	<li><a href="https://twitter.com/spellacy/">Twitter</a></li>
+  </ul>
+
+</footer>
+
+<script>
+
+document.querySelectorAll(".button").forEach(function(button) {
+
+  button.addEventListener("click", function(e) {
+
+    console.log("Success!");
+
+    e.preventDefault();
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
