@@ -60,17 +60,19 @@
       <dd>October 19, 2022</dd>
       <dt>Reported By:</dt>
       <dd>Michael Spellacy</dd>
+      <dt>Issue Logged:</dt>
+      <dd><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1376668">Yes</a></dd>
     <dl>
 
     <h2>Steps to Duplicate Issue</h2>
 
     <ol>
-      <li><a href=https://www.nvaccess.org/download/>Install</a> and open NVDA</li>
+      <li><a href=https://www.nvaccess.org/download/>Install</a> and open NVDA. Screenreader must be running to duplicate this issue.</li>
       <li>On this page:
 
         <ul>
-          <li>Open DevTools and access "Console"</li>
-          <li>Tab through page and click on each interactive element below</li>
+          <li>Open DevTools and access "Console".</li>
+          <li>Tab through page and click on each interactive element below.</li>
           <li>The function should write the word "Success" to the console on every click, which is not happening on elements that contain a <code>::before</code> pseudo-element. The event works as it should when elements that contain an <code>::after</code> pseudo-element are clicked.</li>
         </ul>
 
