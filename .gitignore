@@ -4,10 +4,13 @@ pkg/
 *.swp
 *~
 _httpdocs/
-_site/
-node_modules/
 .bundle/
 .DS_Store
+bbin/
+gh-pages/
+site/_httpdocs/
+coverage
 .ruby-version
 .sass-cache
-.jekyll-metadata
+node_modules
+.jekyll-cache
