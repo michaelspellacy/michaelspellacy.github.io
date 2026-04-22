@@ -27,10 +27,9 @@ role: Front-end developer, designer and accessibility specialist
 sass:
   style: :compressed
 social-github: https://github.com/michaelspellacy/
-social-instagram: https://www.instagram.com/michael.spellacy/
+social-bluesky: https://bsky.app/profile/michaelspellacy.com
 social-linkedin: https://www.linkedin.com/in/spellacy/
-social-mastodon: https://mastodon.cloud/@spellacy
-social-twitter: https://twitter.com/spellacy/
+social-mastodon: https://front-end.social/@spell
 sorce-code: https://github.com/michaelspellacy/michaelspellacy.github.io
 theme-color: "#3E1D62"
 timezone: America/New_York
