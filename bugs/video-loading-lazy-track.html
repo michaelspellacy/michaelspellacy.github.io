@@ -48,20 +48,16 @@
       <li>Scroll the video into view, press play, and observe the lack of captioning, which should load by default.</li>
     </ol>
 
-    <h2>Example</h2>
+    <h2>Examples</h2>
 
-    <p>Video with <code>loading="lazy"</code>
-
-    <br><br>
+    <p>Video with <code>loading="lazy"</code>. Note how caption does not load.</p>
 
     <video aria-label="The Empire Strikes Back: Trailer A" controls loading="lazy">
         <source src="example.mp4" type="video/mp4">
         <track default label="English" kind="captions" src="example.vtt" srclang="en">
     </video>
 
-    <p>Video without <code>loading="lazy"</code>
-
-    <br><br>
+    <p>Video without <code>loading="lazy"</code>. Note how the caption does load.</p>
 
     <video aria-label="The Empire Strikes Back: Trailer A" controls>
         <source src="example.mp4" type="video/mp4">
