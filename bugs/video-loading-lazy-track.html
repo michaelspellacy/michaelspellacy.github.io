@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <meta content="summary_large_image" name="twitter:card">
+	  <meta content="@Spellacy" name="twitter:creator">
+	  <meta content="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=600" name="twitter:image">
+	  <meta content="The author wearing his toy space helmet." name="twitter:image:alt">
+	  <meta content="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=600" property="og:image">
+	  <meta content="The author wearing his toy space helmet." property="og:image:alt">
+    <link href="init.css" rel="stylesheet">
+    <title>track element not presenting VTT file when loading="lazy" is present - Michael Spellacy: Bugs</title>
+
+</head>
+
+<body>
+
+  <header id="banner">
+
+			<a href="https://michaelspellacy.com">
+
+				<img alt="Michael Spellacy: Bugs" height="100" src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg?s=200" width="100">
+
+			</a>
+
+	</header>
+
+  <main>
+
+    <h1>Captions not loading when <code>loading="lazy"</code> is present on <code>video</code> element.</h1>
+
+    <dl>
+      <dt>Issue:</dt>
+      <dd>Following the introduction of native lazy loading for <code>video</code> and <code>audio</code> elements in Chrome 148, <code>track</code> elements (captions/subtitles) no longer load when <code>loading="lazy"</code> is present on the parent <code>video</code>. This is a regression from prior behavior, where <code>loading="lazy"</code> was silently ignored on video elements and tracks loaded normally. The <code>track</code> element's <code>readyState</code> remains <code>0</code> (NONE) and no network request for the VTT file is made, even after the video scrolls into view and begins loading its source. The issue does not reproduce in Firefox, where lazy loading for video is not yet implemented.</dd>
+      <dt>Platform(s):</dt>
+      <dd><b>Chrome:</b> Version 149.0.7827.54 (Official Build) (64-bit)</dd>
+      <dt>Date:</dt>
+      <dd>June 9, 2026</dd>
+      <dt>Reported By:</dt>
+      <dd>Michael Spellacy</dd>
+      <dt>Issue Logged:</dt>
+      <dd>No</dd>
+    <dl>
+
+    <h2>Steps to Duplicate Issue</h2>
+
+    <ol>
+      <li>Create a <code>video</code> element with <code>loading="lazy"</code>, a <code>source</code> pointing to a valid MP4, and a <code>track</code> pointing to a valid VTT file.</li>
+      <li>Load the page in Chrome 148 or later.</li>
+      <li>Scroll the video into view, press play, and observe the lack of captioning, which should load by default.</li>
+    </ol>
+
+    <h2>Example</h2>
+
+    <p>Video with <code>locding="lazy"</code>
+
+    <br><br>
+
+    <video aria-label="The Empire Strikes Back: Trailer A" controls loading="lazy">
+        <source src="example.mp4" type="video/mp4">
+        <track default label="English" kind="captions" src="example.vtt" srclang="en">
+    </video>
+
+    <p>Video without <code>locding="lazy"</code>
+
+    <br><br>
+
+    <video aria-label="The Empire Strikes Back: Trailer A" controls>
+        <source src="example.mp4" type="video/mp4">
+        <track default label="English" kind="captions" src="example.vtt" srclang="en">
+    </video>
+
+    <h2>Expected</h2>
+
+    <p>Captions and subtitles are available and the VTT file is fetched once the video enters the viewport.</p>
+
+    <h2>Actual</h2>
+
+    <p>No VTT request is made, <code>track.readyState</code> stays <code>0</code>, and captions, which are set to show by default, are absent from native controls.</p>
+
+    <h2>Workaround</h2>
+
+    <p>Remove <code>loading="lazy"</code> from the <code>video</code> element.</p>
+
+  </main>
+
+<footer>
+
+  <h3>Contact Me</h3>
+
+  <ul>
+  	<li><a href="mailto:spell@spellacy.net">Email</a></li>
+  	<li><a href="https://github.com/michaelspellacy/">Github</a></li>
+  	<li><a href="https://twitter.com/spellacy/">Twitter</a></li>
+  </ul>
+
+</footer>
+
+
+</body>
+</html>
