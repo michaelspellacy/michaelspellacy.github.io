@@ -20,6 +20,7 @@ line-height: normal;
 code {
 background-color: #000;
 color: #fff;
+border-radius: 5px;
 }
 
 kbd {
